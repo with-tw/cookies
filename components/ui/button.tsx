@@ -4,6 +4,8 @@ import { ArrowRight, ChevronRight, Loader2 } from 'lucide-react';
 import { ReactNode, forwardRef, useState } from 'react';
 
 import { motion } from 'framer-motion';
+import { ComponentAnimationType } from '../component-configs/animation-config';
+import { ComponentAnimation } from '../component-configs/animation-config';
 
 export type ButtonVariantType = 'primary' | 'secondary' | 'ghost';
 export type ButtonSizeType = 'sm' | 'md' | 'lg';
@@ -17,6 +19,7 @@ export interface ButtonProps
   size?: ButtonSizeType;
   stretch?: boolean;
   isLoading?: boolean;
+  animationType?: ComponentAnimationType;
 }
 
 const ButtonVariantStyles: Record<ButtonVariantType, string> = {
@@ -45,18 +48,27 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       stretch = false,
       disabled = false,
       isLoading = false,
+      animationType = 'none',
       ...args
     },
     ref,
   ) => {
     const [hovering, setHovering] = useState<boolean>(false);
     return (
-      <button
+      <motion.button
+        initial={{
+          ...ComponentAnimation[animationType].initial,
+        }}
+        animate={{
+          ...ComponentAnimation[animationType].animate,
+        }}
+        whileTap={{
+          scale: 0.9,
+        }}
         ref={ref}
         className={cn(
-          'tracking-tight font-medium flex flex-row items-center justify-center gap-1 hover:gap-1.5 outline-none transition-all',
-          !disabled &&
-            'hover:brightness-110 active:brightness-90 active:scale-90',
+          'tracking-tight font-medium flex flex-row items-center justify-center gap-1 hover:gap-1.5 outline-none',
+          !disabled && 'hover:brightness-110 active:brightness-90',
           ButtonVariantStyles[variant],
           ButtonSizeStyles[size],
           className,
@@ -80,7 +92,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             args.onMouseLeave(event);
           }
         }}
-        {...args}>
+        {...(args as unknown as any)}>
         {isLoading ? (
           <motion.span
             key={'loader-wrapper'}
@@ -109,7 +121,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               ))}
           </>
         )}
-      </button>
+      </motion.button>
     );
   },
 );

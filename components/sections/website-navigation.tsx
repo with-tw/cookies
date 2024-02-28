@@ -15,7 +15,7 @@ export default function WebsiteNavigation() {
         </div>
         <div className="navbar-options flex flex-row items-center justify-end gap-4">
           <Button variant="secondary">See Examples</Button>
-          <Button>Start Building</Button>
+          <Button animationType="from-bottom">Start Building</Button>
         </div>
       </nav>
     </ResponsiveGridControl>
