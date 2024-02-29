@@ -19,13 +19,6 @@ export default function WebsiteNavigation() {
             <NavbarLogo responsive />
           </Link>
         </div>
-        <div className="navbar-options-wrapper flex flex-row items-center justify-end">
-          {/* {NavbarOptions.map((option: NavbarOptionType, index: number) => {
-            return <Link key={index} href={option.path}>
-              <Button variant="ghost">{option.name}</Button>
-            </Link>
-          })} */}
-        </div>
         <div className="navbar-actions-wrapper flex flex-row items-center justify-end gap-4 max-lg:hidden">
           {NavbarOptions.map((option: NavbarOptionType, index: number) => {
             return (
@@ -34,8 +27,7 @@ export default function WebsiteNavigation() {
               </Link>
             );
           })}
-          <Button variant="secondary">Explore Cookies</Button>
-          <Button>Start Building</Button>
+          <Button>Explore Cookies</Button>
         </div>
       </ResponsiveGridControl>
     </nav>
