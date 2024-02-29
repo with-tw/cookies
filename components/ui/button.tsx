@@ -69,6 +69,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           'tracking-tight font-medium flex flex-row items-center justify-center gap-1 hover:gap-1.5 outline-none',
           !disabled && 'hover:brightness-110 active:brightness-90',
+          animationType === 'none' && 'transition-all',
           ButtonVariantStyles[variant],
           ButtonSizeStyles[size],
           className,
