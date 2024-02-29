@@ -10,8 +10,18 @@ export default function LandingHeroSection() {
           with boilerplate cookies
         </h1>
         <div className="hero-section-cta-container flex flex-row items-center justify-start gap-4 mt-6">
-          <Button size="lg">Explore Cookies</Button>
-          <Button size="lg" withArrow variant="secondary">
+          <Button size="lg" className="max-md:hidden">
+            Explore Cookies
+          </Button>
+          <Button
+            size="lg"
+            withArrow
+            variant="secondary"
+            className="max-md:hidden">
+            Components
+          </Button>
+          <Button className="md:hidden">Explore Cookies</Button>
+          <Button withArrow variant="secondary" className="md:hidden">
             Components
           </Button>
         </div>

@@ -12,14 +12,14 @@ const NavbarOptions: NavbarOptionType[] = [
 
 export default function WebsiteNavigation() {
   return (
-    <ResponsiveGridControl>
-      <nav className="website-navigation p-4 flex flex-row items-center justify-between">
+    <nav className="website-navigation py-4">
+      <ResponsiveGridControl className="flex flex-row items-center justify-between">
         <div className="logo-wrapper">
           <Link href={'/'}>
             <NavbarLogo responsive />
           </Link>
         </div>
-        <div className="navbar-options-wrapper flex flex-row items-center justify-center">
+        <div className="navbar-options-wrapper flex flex-row items-center justify-end">
           {/* {NavbarOptions.map((option: NavbarOptionType, index: number) => {
             return <Link key={index} href={option.path}>
               <Button variant="ghost">{option.name}</Button>
@@ -37,7 +37,7 @@ export default function WebsiteNavigation() {
           <Button variant="secondary">Explore Cookies</Button>
           <Button>Start Building</Button>
         </div>
-      </nav>
-    </ResponsiveGridControl>
+      </ResponsiveGridControl>
+    </nav>
   );
 }

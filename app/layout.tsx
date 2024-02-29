@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { CSPostHogProvider } from '@/services/posthog/provider';
 import WebsiteNavigation from '@/components/sections/website-navigation';
+import FullPageGridDesign from '@/components/layouts/full-page-grid-design';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -23,8 +24,13 @@ export default function RootLayout({
     <html lang="en">
       <CSPostHogProvider>
         <body className={inter.className}>
-          <WebsiteNavigation />
-          {children}
+          <div className="grid-design-container relative z-10">
+            <FullPageGridDesign />
+          </div>
+          <div className="content-on-top-grid relative z-20">
+            <WebsiteNavigation />
+            {children}
+          </div>
         </body>
       </CSPostHogProvider>
     </html>
