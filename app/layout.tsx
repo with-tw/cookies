@@ -4,6 +4,7 @@ import './globals.css';
 import { CSPostHogProvider } from '@/services/posthog/provider';
 import WebsiteNavigation from '@/components/sections/website-navigation';
 import FullPageGridDesign from '@/components/layouts/full-page-grid-design';
+import { TailwindIndicator } from '@/components/dev/tailwind-breakpoint-indicator';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -24,13 +25,14 @@ export default function RootLayout({
     <html lang="en">
       <CSPostHogProvider>
         <body className={inter.className}>
-          <div className="grid-design-container relative z-10">
+          <div className='grid-design-container relative z-10'>
             <FullPageGridDesign />
           </div>
-          <div className="content-on-top-grid relative z-20">
+          <div className='content-on-top-grid relative z-20'>
             <WebsiteNavigation />
             {children}
           </div>
+          <TailwindIndicator />
         </body>
       </CSPostHogProvider>
     </html>
