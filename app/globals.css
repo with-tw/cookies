@@ -4,5 +4,13 @@
 
 html,
 body {
-  @apply bg-neutral-900 tracking-tight text-neutral-200;
+  @apply tracking-tight text-neutral-200;
+}
+
+html {
+  @apply bg-black;
+}
+
+body {
+  @apply h-screen bg-gradient-to-b from-neutral-950 to-neutral-900;
 }
