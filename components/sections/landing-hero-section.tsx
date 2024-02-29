@@ -21,6 +21,16 @@ export default function LandingHeroSection() {
             Components
           </Button>
         </div>
+        <div className="text-base text-white/50 mt-12">
+          <p>
+            Introducing a collection of boilerplate code for components and
+            layouts, <br />
+            along with example UI designs called cookies.
+          </p>
+          <p className="mt-6">
+            Get started with building UI for your project with godspeed.
+          </p>
+        </div>
       </ResponsiveGridControl>
       <div className="gradient-effects-container">
         <div className="bg-violet-600 bg-opacity-60 blur-[200px] w-[400px] h-[400px] rounded-full absolute -bottom-[200px]" />
