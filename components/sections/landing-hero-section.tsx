@@ -3,7 +3,7 @@ import { Button } from '../ui/button';
 
 export default function LandingHeroSection() {
   return (
-    <main className="landing-hero-section py-24 relative">
+    <main className="landing-hero-section my-24 relative border-y border-y-neutral-800/80">
       <ResponsiveGridControl className="relative z-30">
         <h1 className="landing-hero-headline font-bold text-6xl leading-snug tracking-tighter max-lg:text-5xl max-md:text-3xl">
           Build your UI fast <br className="max-sm:hidden" />

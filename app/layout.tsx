@@ -25,10 +25,10 @@ export default function RootLayout({
     <html lang="en">
       <CSPostHogProvider>
         <body className={inter.className}>
-          <div className='grid-design-container relative z-10'>
+          <div className="grid-design-container relative z-10">
             <FullPageGridDesign />
           </div>
-          <div className='content-on-top-grid relative z-20'>
+          <div className="content-on-top-grid relative z-20">
             <WebsiteNavigation />
             {children}
           </div>
