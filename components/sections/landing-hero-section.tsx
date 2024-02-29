@@ -9,11 +9,9 @@ export default function LandingHeroSection() {
           Build your UI fast <br className="max-sm:hidden" />
           with boilerplate cookies
         </h1>
-        <div className='hero-section-cta-container flex flex-row items-center justify-start gap-4 mt-6'>
-          <Button size='lg'>
-            Explore Cookies
-          </Button>
-          <Button size='lg' withArrow variant='secondary'>
+        <div className="hero-section-cta-container flex flex-row items-center justify-start gap-4 mt-6">
+          <Button size="lg">Explore Cookies</Button>
+          <Button size="lg" withArrow variant="secondary">
             Components
           </Button>
         </div>
