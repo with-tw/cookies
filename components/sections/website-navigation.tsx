@@ -6,7 +6,7 @@ import { Button } from '../ui/button';
 type NavbarOptionType = { path: string; name: string };
 const NavbarOptions: NavbarOptionType[] = [
   { path: '/github', name: 'GitHub' },
-  { path: '/cookies', name: 'Explore Cookies' },
+  { path: '/changelog', name: 'Changelog' },
   { path: '/components', name: 'Components' },
 ];
 
@@ -26,7 +26,7 @@ export default function WebsiteNavigation() {
             </Link>
           })} */}
         </div>
-        <div className="navbar-actions-wrapper flex flex-row items-center justify-end gap-4">
+        <div className="navbar-actions-wrapper flex flex-row items-center justify-end gap-4 max-lg:hidden">
           {NavbarOptions.map((option: NavbarOptionType, index: number) => {
             return (
               <Link key={index} href={option.path}>
@@ -34,7 +34,7 @@ export default function WebsiteNavigation() {
               </Link>
             );
           })}
-          <Button variant="secondary">See Examples</Button>
+          <Button variant="secondary">Explore Cookies</Button>
           <Button>Start Building</Button>
         </div>
       </nav>
