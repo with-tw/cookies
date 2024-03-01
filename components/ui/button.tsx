@@ -25,7 +25,7 @@ export interface ButtonProps
 const ButtonVariantStyles: Record<ButtonVariantType, string> = {
   primary:
     'bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-md active:shadow',
-  secondary: 'bg-neutral-800 focus:ring-neutral-700',
+  secondary: 'bg-white/10 hover:bg-white/20 focus:ring-neutral-700',
   ghost: 'bg-transparent hover:bg-white/10',
 };
 
