@@ -9,6 +9,10 @@ export type ComponentAnimationFramerConfigType = {
   opacity?: number;
   y?: number;
   x?: number;
+  scale?: number;
+  zoom?: number;
+  width?: number;
+  height?: number;
 };
 
 export const ComponentAnimation: Record<
