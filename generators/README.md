@@ -21,6 +21,7 @@ vim .git/hooks/pre-commit
 - Paste these scripts in `.git/hooks/pre-commit`
 
 ```bash
+#!/bin/sh
 # .git/hooks/pre-commit
 
 # Prettier code formatting
