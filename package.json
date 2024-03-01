@@ -20,7 +20,9 @@
     "lucide-react": "^0.341.0",
     "next": "14.1.0",
     "posthog-js": "^1.109.0",
+    "prism-react-renderer": "^2.3.1",
     "react": "^18",
+    "react-code-block": "^1.0.0",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1"
   },
@@ -28,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "15.5.11",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
