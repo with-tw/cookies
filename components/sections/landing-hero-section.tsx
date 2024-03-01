@@ -1,10 +1,10 @@
-import { ResponsiveGridControl } from '../layouts/responsive-grid-control';
+import { ResponsiveControl } from '../layouts/responsive-control';
 import { Button } from '../ui/button';
 
 export default function LandingHeroSection() {
   return (
     <main className="landing-hero-section my-24 relative border-y border-y-neutral-800/80">
-      <ResponsiveGridControl className="relative z-30">
+      <ResponsiveControl className="relative z-30">
         <h1 className="landing-hero-headline font-bold text-6xl leading-snug tracking-tighter max-lg:text-5xl max-md:text-3xl">
           Build your UI fast <br className="max-sm:hidden" />
           with boilerplate cookies
@@ -31,7 +31,7 @@ export default function LandingHeroSection() {
             Components
           </Button>
         </div>
-      </ResponsiveGridControl>
+      </ResponsiveControl>
       <div className="gradient-effects-container">
         <div className="bg-violet-600 bg-opacity-60 blur-[200px] w-[400px] h-[400px] rounded-full absolute -bottom-[200px]" />
         <div className="bg-blue-500 bg-opacity-60 blur-[200px] w-[400px] h-[400px] rounded-full absolute -bottom-[200px] left-[400px]" />

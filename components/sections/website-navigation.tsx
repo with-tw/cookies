@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ResponsiveGridControl } from '../layouts/responsive-grid-control';
+import { ResponsiveControl } from '../layouts/responsive-control';
 import { NavbarLogo } from '../ui/navbar-logo';
 import { Button } from '../ui/button';
 
@@ -13,7 +13,7 @@ const NavbarOptions: NavbarOptionType[] = [
 export default function WebsiteNavigation() {
   return (
     <nav className="website-navigation py-4">
-      <ResponsiveGridControl className="flex flex-row items-center justify-between">
+      <ResponsiveControl className="flex flex-row items-center justify-between">
         <div className="logo-wrapper">
           <Link href={'/'}>
             <NavbarLogo responsive />
@@ -29,7 +29,7 @@ export default function WebsiteNavigation() {
           })}
           <Button>Explore Cookies</Button>
         </div>
-      </ResponsiveGridControl>
+      </ResponsiveControl>
     </nav>
   );
 }

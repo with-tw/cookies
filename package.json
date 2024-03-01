@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "prettier:check": "prettier --check --ignore-path .gitignore .",
-    "prettier:fix": "prettier --write --ignore-path .gitignore ."
+    "prettier:fix": "prettier --write --ignore-path .gitignore .",
+    "package:generate:setup-code": "yarn prettier:fix && yarn prettier:check && ts-node generators/update-setup-code.ts",
+    "package:generate:component-examples": "yarn prettier:fix && yarn prettier:check && ts-node generators/update-component-examples.ts",
+    "package:generate": "yarn package:generate:component-examples && yarn package:generate:setup-code"
   },
   "dependencies": {
     "clsx": "^2.1.0",
@@ -31,6 +34,7 @@
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

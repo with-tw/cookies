@@ -1,12 +1,12 @@
 import { cn } from '@/helpers/utils';
 import { forwardRef } from 'react';
 
-export interface ResponsiveGridControlProps
+export interface ResponsiveControlProps
   extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const ResponsiveGridControl = forwardRef<
+export const ResponsiveControl = forwardRef<
   HTMLDivElement,
-  ResponsiveGridControlProps
+  ResponsiveControlProps
 >(({ className, ...args }, ref) => {
   return (
     <div
@@ -22,4 +22,4 @@ export const ResponsiveGridControl = forwardRef<
   );
 });
 
-ResponsiveGridControl.displayName = 'ResponsiveGridControl';
+ResponsiveControl.displayName = 'ResponsiveControl';
