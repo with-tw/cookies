@@ -27,7 +27,7 @@ export default function WebsiteNavigation() {
               </Link>
             );
           })}
-          <Button variant='secondary'>Explore Cookies</Button>
+          <Button variant="secondary">Explore Cookies</Button>
           <Link href={'/getting-started'}>
             <Button withArrow>Start Building</Button>
           </Link>
