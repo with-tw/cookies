@@ -4,8 +4,8 @@ import { ArrowRight, ChevronRight, Loader2 } from 'lucide-react';
 import { ReactNode, forwardRef, useState } from 'react';
 
 import { motion } from 'framer-motion';
-import { ComponentAnimationType } from '../component-configs/animation-config';
-import { ComponentAnimation } from '../component-configs/animation-config';
+import { ComponentAnimationType } from '../configs/animation-config';
+import { ComponentAnimation } from '../configs/animation-config';
 
 export type ButtonVariantType = 'primary' | 'secondary' | 'ghost';
 export type ButtonSizeType = 'sm' | 'md' | 'lg';
