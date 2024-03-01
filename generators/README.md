@@ -33,5 +33,5 @@ yarn prettier:check || (echo "Prettier Check failed" && exit 1)
 
 echo "Generator code for updating package/registry"
 echo "Updating package/registry/setup-code.json and package/registry/component-examples.json"
-yarn package:generate || (echo "Package Generate failed" && exit 1)
+yarn package:generate
 ```
