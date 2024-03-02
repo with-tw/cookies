@@ -84,7 +84,7 @@ export const SetupSection = forwardRef<HTMLDivElement, SetupSectionProps>(
           </ResponsiveControl>
         </PageHeader>
         <div className="mt-12 setup-steps-container">
-          <ResponsiveControl className="grid grid-cols-1 items-start gap-24">
+          <ResponsiveControl className="grid grid-cols-1 items-start gap-36">
             {SetupData.map((setup, index) => {
               return (
                 <SetupStepContainer
