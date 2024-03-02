@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PageHeader } from '../layouts/page-header';
 import { ResponsiveControl } from '../layouts/responsive-control';
 import { Button } from '../ui/button';
@@ -24,13 +25,21 @@ export default function LandingHeroSection() {
           <Button size="lg" className="max-md:hidden">
             Explore Cookies
           </Button>
-          <Button size="lg" withArrow variant="ghost" className="max-md:hidden">
-            Components
-          </Button>
+          <Link href={'/components'}>
+            <Button
+              size="lg"
+              withArrow
+              variant="ghost"
+              className="max-md:hidden">
+              Components
+            </Button>
+          </Link>
           <Button className="md:hidden">Explore Cookies</Button>
-          <Button withArrow variant="ghost" className="md:hidden">
-            Components
-          </Button>
+          <Link href={'/components'}>
+            <Button withArrow variant="ghost" className="md:hidden">
+              Components
+            </Button>
+          </Link>
         </div>
       </ResponsiveControl>
     </PageHeader>

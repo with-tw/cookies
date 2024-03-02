@@ -4,8 +4,9 @@ import { forwardRef } from 'react';
 import { cn } from '@/helpers/utils';
 import { PageHeader } from '../layouts/page-header';
 import { Button } from '../ui/button';
-import { CodeBlock } from '../ui/code-block';
+import { CodeBlock } from '../website/code-block';
 import { SETUP_CODE } from '@/package/registry/setup-code';
+import Link from 'next/link';
 
 type SetupStepType = {
   title: string;
@@ -35,7 +36,7 @@ const SetupData: SetupStepType[] = [
   {
     title: 'Have a basic NextJS + Typescript + Tailwind project setup',
     description:
-      'The setup is going to require a NextJS app with Typescript & Tailwind. Make sure you have a simple project setup, If you have it already, you can go to the next app.',
+      'The setup is going to require a NextJS app with Typescript & Tailwind. Make sure you have a simple project setup, If you have it already, you can go to the next step.',
     code: `# using npm \nnpx create-next-app app-name \n\n# using yarn \nyarn create next-app app-name`,
   },
   {
@@ -79,7 +80,9 @@ export const SetupSection = forwardRef<HTMLDivElement, SetupSectionProps>(
               </p>
             </div>
             <div className="next-step-actions-wrapper mt-6">
-              <Button withArrow>Explore Components</Button>
+              <Link href={'/components'}>
+                <Button withArrow>Explore Components</Button>
+              </Link>
             </div>
           </ResponsiveControl>
         </PageHeader>

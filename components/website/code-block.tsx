@@ -1,8 +1,8 @@
 'use client';
 import { cn } from '@/helpers/utils';
 import { forwardRef, useState } from 'react';
-import { Button } from './button';
 import { copyToClipboard } from '@/helpers/copy-to-clipboard';
+import { Button } from '../ui/button';
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   fileName?: string;

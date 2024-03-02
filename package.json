@@ -14,6 +14,10 @@
     "package:generate": "yarn package:generate:component-examples && yarn package:generate:setup-code && yarn prettier:fix && yarn prettier:check"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.1.1",
+    "@types/mdx": "^2.0.11",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.6",
     "geist": "^1.2.2",
@@ -24,6 +28,7 @@
     "react": "^18",
     "react-code-block": "^1.0.0",
     "react-dom": "^18",
+    "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {

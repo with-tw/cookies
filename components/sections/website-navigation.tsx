@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ResponsiveControl } from '../layouts/responsive-control';
-import { NavbarLogo } from '../ui/navbar-logo';
+import { NavbarLogo } from '../website/navbar-logo';
 import { Button } from '../ui/button';
 
 type NavbarOptionType = { path: string; name: string };
