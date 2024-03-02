@@ -11,7 +11,7 @@
     "prettier:fix": "prettier --write --ignore-path .gitignore .",
     "package:generate:setup-code": "ts-node generators/update-setup-code.ts",
     "package:generate:component-examples": "ts-node generators/update-component-examples.ts",
-    "package:generate": "yarn package:generate:component-examples && yarn package:generate:setup-code && yarn prettier:fix && yarn prettier:check"
+    "package:generate": "yarn package:generate:component-examples && yarn package:generate:setup-code"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
