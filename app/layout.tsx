@@ -29,7 +29,7 @@ export default function RootLayout({
           <div className="grid-design-container relative z-10">
             <FullPageGridDesign />
           </div>
-          <div className="content-on-top-grid relative z-20">
+          <div className="content-on-top-grid relative z-20 pb-24">
             <ResponsiveControl className="relative">
               {/* <div className="gradient-effects-container"> */}
               <div className="bg-violet-600 bg-opacity-60 blur-[200px] w-[400px] h-[400px] rounded-full absolute top-[100px]" />
