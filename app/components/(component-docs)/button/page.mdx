@@ -1,0 +1,9 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+
+<ComponentDocsHeader />
+
+<CodeBlock hasViewMore fileName={SETUP_CODE['button'].registerAt}>
+  {SETUP_CODE['button'].code}
+</CodeBlock>

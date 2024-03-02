@@ -1,0 +1,68 @@
+'use client';
+import { cn } from '@/helpers/utils';
+import { forwardRef, useState } from 'react';
+import { copyToClipboard } from '@/helpers/copy-to-clipboard';
+import { Button } from '../ui/button';
+
+interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
+  fileName?: string;
+  hasViewMore?: boolean;
+}
+
+export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
+  (
+    { className, children, fileName = false, hasViewMore = false, ...args },
+    ref,
+  ) => {
+    const [viewMore, setViewMore] = useState<boolean>(false);
+    // to manage states for copy-to-clipboard
+    const [ctc, setCTC] = useState<boolean>(false);
+    return (
+      <div
+        ref={ref}
+        className={cn(
+          'code-block font-mono bg-black/30 rounded-xl overflow-hidden relative min-w-[600px] w-fit border border-neutral-700 shadow-lg',
+          !fileName && 'p-6',
+          viewMore ? 'h-fit' : 'max-h-[300px] overflow-hidden',
+          className,
+        )}
+        {...args}>
+        {fileName && (
+          <div className="bg-neutral-800 p-3 mb-4 text-sm  flex flex-row items-center justify-between">
+            {fileName}
+            <Button
+              size="sm"
+              variant="secondary"
+              onClick={() => {
+                copyToClipboard(children as string);
+                setCTC(true);
+                setTimeout(() => setCTC(false), 1500);
+              }}>
+              {ctc ? 'Copied' : 'Copy'}
+            </Button>
+          </div>
+        )}
+        <div
+          className={cn(
+            hasViewMore && 'h-[150px] overflow-hidden',
+            fileName && 'px-6 py-2',
+            viewMore && 'h-fit',
+          )}>
+          <code className={cn('whitespace-pre-wrap')}>{children}</code>
+        </div>
+        {hasViewMore && (
+          <Button
+            variant="secondary"
+            size="sm"
+            className="absolute z-40 bottom-2 right-2"
+            onClick={() => setViewMore(!viewMore)}>
+            {' '}
+            {viewMore ? 'View less' : 'View more'}
+          </Button>
+        )}
+      </div>
+    );
+  },
+);
+
+CodeBlock.displayName = 'CodeBlock';

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ResponsiveControl } from '../layouts/responsive-control';
-import { NavbarLogo } from '../ui/navbar-logo';
+import { NavbarLogo } from '../website/navbar-logo';
 import { Button } from '../ui/button';
 
 type NavbarOptionType = { path: string; name: string };
@@ -12,7 +12,7 @@ const NavbarOptions: NavbarOptionType[] = [
 
 export default function WebsiteNavigation() {
   return (
-    <nav className="website-navigation py-4">
+    <nav className="website-navigation py-4 relative z-50">
       <ResponsiveControl className="flex flex-row items-center justify-between">
         <div className="logo-wrapper">
           <Link href={'/'}>
@@ -27,7 +27,10 @@ export default function WebsiteNavigation() {
               </Link>
             );
           })}
-          <Button>Explore Cookies</Button>
+          <Button variant="secondary">Explore Cookies</Button>
+          <Link href={'/getting-started'}>
+            <Button withArrow>Start Building</Button>
+          </Link>
         </div>
       </ResponsiveControl>
     </nav>

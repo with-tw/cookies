@@ -1,63 +1,60 @@
 const fs = require('fs');
 const path = require('path');
 
-type FileRegistryType = { name: string; registerAt: string; path: string };
+type CodeRegisteryType =
+  | 'animation-config'
+  | 'utils'
+  | 'button'
+  | 'responsive-control';
 
-const OUTPUT_PATH = path.join(__dirname, '../package/registry/setup-code.json');
-const FILES_TO_REGISTER: FileRegistryType[] = [
-  {
-    name: 'animation-config',
+const OUTPUT_PATH = path.join(__dirname, '../package/registry/setup-code.tsx');
+const FILES_TO_REGISTER: Record<
+  CodeRegisteryType,
+  { registerAt: string; path: string }
+> = {
+  'animation-config': {
     registerAt: 'components/configs/animation-config.ts',
     path: path.join(__dirname, '../components/configs/animation-config.ts'),
   },
-  {
-    name: 'utils',
+  utils: {
     registerAt: 'helpers/utils.ts',
     path: path.join(__dirname, '../helpers/utils.ts'),
   },
-  {
-    name: 'button',
+  button: {
     registerAt: 'components/ui/button.tsx',
     path: path.join(__dirname, '../components/ui/button.tsx'),
   },
-  {
-    name: 'responsive-control',
+  'responsive-control': {
     registerAt: 'components/layouts/responsive-control.tsx',
     path: path.join(__dirname, '../components/layouts/responsive-control.tsx'),
   },
-];
+};
 
-type ConfigObjectType = Pick<FileRegistryType, 'name'> &
-  Pick<FileRegistryType, 'registerAt'> & { code: string };
+const setupCode = Object.keys(FILES_TO_REGISTER).reduce(
+  (acc, name) => {
+    const { registerAt, path: filePath } =
+      FILES_TO_REGISTER[name as CodeRegisteryType];
+    const code: string = fs.readFileSync(filePath, 'utf-8');
+    acc[name] = { registerAt, code };
+    return acc;
+  },
+  {} as Record<string, { registerAt: string; code: string }>,
+);
 
-function updateSetupCode() {
-  let configObject: ConfigObjectType[] = [];
-  try {
-    // Fetching code from all the listed files
-    FILES_TO_REGISTER.map(({ name, registerAt, path }: FileRegistryType) => {
-      const fileCode: string = fs.readFileSync(path, 'utf-8');
-      configObject.push({
-        name,
-        registerAt,
-        code: fileCode,
-      });
-    });
-    // Convert the config object to JSON string
-    const jsonConfigObject: string = JSON.stringify(configObject);
-    // Save the converted JSON string to OUTPUT_PATH
-    fs.writeFileSync(OUTPUT_PATH, jsonConfigObject, 'utf-8');
-    console.log(
-      '[Generator > Update Setup Code]',
-      'Successfully added setup-code for utils and components to package/registry/setup-code.json',
-    );
-  } catch (error) {
-    console.error(
-      '[Generator > Update Setup Code]',
-      'Error while adding the setup-code for utils and components to package/registry/setup-code.json',
-      `[Error Message] ${(error as Error).message}`,
-      `[Error Cause] ${(error as Error).cause}`,
-    );
-  }
-}
+const tsxContent = `\
+// This file is auto-generated. Do not modify manually.
 
-updateSetupCode();
+export type CodeRegisteryType =
+  | 'animation-config'
+  | 'utils'
+  | 'button'
+  | 'responsive-control';
+  
+export const SETUP_CODE: Record<CodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(setupCode, null, 2)};
+`;
+
+fs.writeFileSync(OUTPUT_PATH, tsxContent, 'utf-8');
+console.log(
+  '[Generator > Update Setup Code]',
+  'Successfully updated setup-code in package/registry/setup-code.tsx',
+);

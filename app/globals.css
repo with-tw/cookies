@@ -8,7 +8,7 @@ body {
 }
 
 html {
-  @apply bg-black;
+  @apply bg-neutral-900;
 }
 
 body {
