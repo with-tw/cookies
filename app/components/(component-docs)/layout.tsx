@@ -8,7 +8,7 @@ export default function ComponentDocsLayout({
 }) {
   return (
     <div className="component-docs-layout markdown-content">
-      <ResponsiveControl className=''>{children}</ResponsiveControl>
+      <ResponsiveControl className="">{children}</ResponsiveControl>
     </div>
   );
 }
