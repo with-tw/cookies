@@ -3,12 +3,15 @@ import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
 import { CodeBlock } from '@/components/website/code-block.tsx';
 import { ComponentPreview } from '@/components/website/component-preview.tsx';
 import { Button } from '@/components/ui/button.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
 
 <ComponentDocsHeader />
 
-<CodeBlock hasViewMore fileName={SETUP_CODE['button'].registerAt}>
-  {SETUP_CODE['button'].code}
-</CodeBlock>
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['button'].registerAt}>
+    {SETUP_CODE['button'].code}
+  </CodeBlock>
+</ComponentManualSetup>
 
 <div class="py-12" />
 
@@ -53,6 +56,15 @@ import { Button } from '@/components/ui/button.tsx';
   headline="Disabled Button"
   description="Button with disabled state. Not accessible if disabled is set as true">
   <Button disabled>Disabled Button</Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button withArrow>Button With Arrow</Button>`}
+  headline="Button with arrow"
+  description="Button component with leading arrow icon">
+  <Button withArrow>Button With Arrow</Button>
 </ComponentPreview>
 
 <div class="py-12" />
