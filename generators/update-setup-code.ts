@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const devUtils = require('../helpers/dev');
 
-const devLog = devUtils.DevLog;
+const devConsole = devUtils.DevConsole;
 
 type CodeRegisteryType =
   | 'animation-config'
@@ -57,7 +57,7 @@ export const SETUP_CODE: Record<CodeRegisteryType, { registerAt: string; code: s
 `;
 
 fs.writeFileSync(OUTPUT_PATH, tsxContent, 'utf-8');
-devLog.log(
+devConsole.log(
   '[Generator > Update Setup Code]',
   'Successfully updated setup-code in package/registry/setup-code.tsx',
 );

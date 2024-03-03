@@ -5,7 +5,7 @@ type DevConsoleFunctions = {
   error: (...message: string[]) => void;
 };
 
-const DevLog: DevConsoleFunctions = {
+const DevConsole: DevConsoleFunctions = {
   log: (...message) => {
     if (process.env.NODE_ENV === 'production') return;
     console.log('[DEV]', ...message);
@@ -25,5 +25,5 @@ const DevLog: DevConsoleFunctions = {
 };
 
 module.exports = {
-  DevLog,
+  DevConsole,
 };
