@@ -1,5 +1,4 @@
 import LandingHeroSection from '@/components/sections/landing-hero-section';
-import { SetupSection } from '@/components/sections/setup-section';
 
 export default function Home(): JSX.Element {
   return (

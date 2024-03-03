@@ -1,9 +1,122 @@
 import ComponentDocsHeader from '@/components/website/component-docs-header';
 import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
 import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { Button } from '@/components/ui/button.tsx';
 
 <ComponentDocsHeader />
 
 <CodeBlock hasViewMore fileName={SETUP_CODE['button'].registerAt}>
   {SETUP_CODE['button'].code}
 </CodeBlock>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="primary">Primary Button</Button>`}
+  headline="Primary Button"
+  description="This is the default button design, with subtle blue gradient effect">
+  <Button variant="primary">Primary Button</Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="secondary">Secondary Button</Button>`}
+  headline="Secondary Button"
+  description="This is the secondary button, with subtle background">
+  <Button variant="secondary">Secondary Button</Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="ghost">Ghost Button</Button>`}
+  headline="Ghost Button"
+  description="This is the ghost button, with trasnparent background and subtle white themed background on interaction.">
+  <Button variant="ghost">Ghost Button</Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button isLoading>Loading Button</Button>`}
+  headline="Loading Button"
+  description="Has support for loading states, by setting isLoading as true">
+  <Button isLoading>Loading Button</Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button disabled>Disabled Button</Button>`}
+  headline="Disabled Button"
+  description="Button with disabled state. Not accessible if disabled is set as true">
+  <Button disabled>Disabled Button</Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="primary" size="sm">Small Primary Button</Button>`}
+  headline="Small Primary Button"
+  description="Primary Button with small size">
+  <Button variant="primary" size="sm">
+    Small Primary Button
+  </Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="secondary" size="sm">Small Secondary Button</Button>`}
+  headline="Small Secondary Button"
+  description="Secondary button with small size">
+  <Button variant="secondary" size="sm">
+    Small Secondary Button
+  </Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="ghost" size="sm">Small Ghost Button</Button>`}
+  headline="Small Ghost Button"
+  description="Ghost Button with small size">
+  <Button variant="ghost" size="sm">
+    Small Ghost Button
+  </Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="primary" size="lg">Large Primary Button</Button>`}
+  headline="Large Primary Button"
+  description="Primary Button with large size">
+  <Button variant="primary" size="lg">
+    Large Primary Button
+  </Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="secondary" size="lg">Large Secondary Button</Button>`}
+  headline="Large Secondary Button"
+  description="Secondary button with large size">
+  <Button variant="secondary" size="lg">
+    Large Secondary Button
+  </Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Button variant="ghost" size="lg">Large Ghost Button</Button>`}
+  headline="Large Ghost Button"
+  description="Ghost Button with large size">
+  <Button variant="ghost" size="lg">
+    Large Ghost Button
+  </Button>
+</ComponentPreview>
