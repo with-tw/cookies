@@ -5,9 +5,16 @@ export type ChangelogContentType = {
 
 export const ChangelogContent: ChangelogContentType[] = [
   {
-    version: '1.0',
+    version: '0.1',
     features: [
-      'Added initial website design',
+      'Adding design and setup for the landing page',
+      'Generator code for updating package/registry',
+      'Adding docs for getting started and all components',
+    ],
+  },
+  {
+    version: '0.2',
+    features: [
       'Added docs and MDX support',
       'Added button components',
       'Has generators in-place to update setup-code to package/registry',
