@@ -24,7 +24,7 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
           'code-block font-mono bg-black/30 rounded-xl relative min-w-[600px] w-fit border border-neutral-700 shadow-lg',
           !fileName && 'p-6',
           viewMore ? 'h-fit overflow-hidden' : 'max-h-[300px] overflow-hidden',
-          "max-md:min-w-[300px] max-md:w-full max-md:overflow-scroll",
+          'max-md:min-w-[300px] max-md:w-full max-md:overflow-scroll',
           className,
         )}
         {...args}>
@@ -49,7 +49,9 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
             fileName && 'px-6 py-2',
             viewMore && 'h-fit',
           )}>
-          <code className={cn('whitespace-pre-wrap max-md:text-sm')}>{children}</code>
+          <code className={cn('whitespace-pre-wrap max-md:text-sm')}>
+            {children}
+          </code>
         </div>
         {hasViewMore && (
           <Button

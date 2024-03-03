@@ -16,15 +16,15 @@ type SetupStepType = {
     path: string;
   };
   code?:
-  | string
-  | {
-    content: string;
-    fileName: string;
-  };
+    | string
+    | {
+        content: string;
+        fileName: string;
+      };
 };
 
 export interface SetupSectionProps
-  extends React.HTMLAttributes<HTMLDivElement> { }
+  extends React.HTMLAttributes<HTMLDivElement> {}
 
 export interface SetupStepContainerProps
   extends React.HTMLAttributes<HTMLDivElement> {
