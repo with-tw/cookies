@@ -15,7 +15,7 @@ export default function ComponentsPage() {
         </ResponsiveControl>
       </PageHeader>
       <div className="components-list-container mt-12">
-        <ResponsiveControl className="grid grid-cols-3 gap-6">
+        <ResponsiveControl className="grid grid-cols-3 gap-6 max-xl:grid-cols-2 max-md:grid-cols-1">
           {ComponentsList.map(
             (component: ComponentListItemType, index: number) => {
               return (
