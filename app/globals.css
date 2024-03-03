@@ -13,4 +13,5 @@ html {
 
 body {
   @apply h-screen bg-gradient-to-b from-neutral-950 to-neutral-900;
+  @apply overflow-x-hidden;
 }
