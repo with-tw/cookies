@@ -16,15 +16,15 @@ type SetupStepType = {
     path: string;
   };
   code?:
-    | string
-    | {
-        content: string;
-        fileName: string;
-      };
+  | string
+  | {
+    content: string;
+    fileName: string;
+  };
 };
 
 export interface SetupSectionProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
+  extends React.HTMLAttributes<HTMLDivElement> { }
 
 export interface SetupStepContainerProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -75,7 +75,7 @@ export const SetupSection = forwardRef<HTMLDivElement, SetupSectionProps>(
               {SetupSectionContent.headline}
             </h2>
             <div className="setup-description-wrapper mt-4">
-              <p className="w-[56ch] opacity-60">
+              <p className="w-[56ch] max-lg:w-full opacity-60">
                 {SetupSectionContent.description}
               </p>
             </div>
@@ -112,8 +112,8 @@ export const SetupStepContainer = forwardRef<
 >(({ className, stepContent, stepIndex, ...args }, ref) => {
   return (
     <div ref={ref} className={cn('setup-step-container relative')} {...args}>
-      <div className="setup-step-body flex flex-row items-start gap-6">
-        <div className="setup-step-body-content-wrapper flex flex-col items-start gap-2 w-[600px] sticky top-12">
+      <div className="setup-step-body flex flex-row items-start gap-6 max-xl:flex-col">
+        <div className="setup-step-body-content-wrapper flex flex-col items-start gap-2 w-[600px] max-lg:w-full xl:sticky top-12">
           <h3 className="text-xl font-medium">{stepContent.title}</h3>
           <p className="text-white/50 mt-2">{stepContent.description}</p>
         </div>

@@ -26,7 +26,7 @@ export default function Changelog() {
 
 function ChangelogUpdate(changelog: ChangelogContentType) {
   return (
-    <div className="changelog-update flex flex-row items-start justify-start w-full gap-12 relative">
+    <div className="changelog-update flex flex-row items-start justify-start w-full gap-12 relative max-lg:flex-col">
       <ChangelogBannerTemplate version={changelog.version} />
       <div className="w-auto py-6">
         <h3 className="leading-snug tracking-tighter font-semibold text-2xl">{`Relase v${changelog.version}`}</h3>
@@ -48,7 +48,7 @@ function ChangelogUpdate(changelog: ChangelogContentType) {
 
 function ChangelogBannerTemplate({ version }: { version: string }) {
   return (
-    <div className="changelog-banner flex flex-col items-center justify-center gap-2 select-none cursor-default w-[500px] h-[300px] bg-black/50 rounded-2xl sticky top-12">
+    <div className="changelog-banner flex flex-col items-center justify-center gap-2 select-none cursor-default w-[500px] h-[300px] bg-black/50 rounded-2xl xl:sticky xl:top-12 max-lg:w-full">
       <span className="leading-snug tracking-tight font-semibold text-3xl flex flex-row items-center gap-2">
         <Image
           src="/logos/cookies-logo.png"
