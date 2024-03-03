@@ -9,9 +9,7 @@ export default function ComponentDocsLayout({
   return (
     <div className="component-docs-layout markdown-content">
       <ResponsiveControl className="relative">
-        <div className='w-[800px]'>
-          {children}
-        </div>
+        <div className="w-[800px]">{children}</div>
       </ResponsiveControl>
     </div>
   );
