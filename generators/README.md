@@ -25,13 +25,15 @@ vim .git/hooks/pre-commit
 
 set -e
 
+echo "Generator code for updating package/registry"
+echo "Updating package/registry/setup-code.json and package/registry/component-examples.json"
+yarn package:generate || (echo "Error while generating setup-code" && exit 1)
+
 echo "Formatting Code using Prettier"
 yarn prettier:fix || (echo "Prettier Fix failed" && exit 1)
 
 echo "Checking for code formatting issues"
 yarn prettier:check || (echo "Prettier Check failed" && exit 1)
 
-echo "Generator code for updating package/registry"
-echo "Updating package/registry/setup-code.json and package/registry/component-examples.json"
-yarn package:generate
+yarn build
 ```
