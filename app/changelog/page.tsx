@@ -29,7 +29,7 @@ function ChangelogUpdate(changelog: ChangelogContentType) {
     <div className="changelog-update flex flex-row items-start justify-start w-full gap-12 relative max-lg:flex-col">
       <ChangelogBannerTemplate version={changelog.version} />
       <div className="w-auto py-6">
-        <h3 className="leading-snug tracking-tighter font-semibold text-2xl">{`Relase v${changelog.version}`}</h3>
+        <h3 className="leading-snug tracking-tighter font-semibold text-2xl">{`Release v${changelog.version}`}</h3>
         <div className="changelog-features-wrapper mt-6">
           <ul className="changelog-features-list space-y-2">
             {changelog.features.map((feature: string, index: number) => {
