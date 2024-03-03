@@ -23,15 +23,10 @@ export default function LandingHeroSection() {
         </div>
         <div className="hero-section-cta-container flex flex-row items-center justify-start gap-4 mt-12">
           <Link href={'/getting-started'} className="max-md:hidden">
-            <Button size="lg">
-              Setup Project
-            </Button>
+            <Button size="lg">Setup Project</Button>
           </Link>
           <Link href={'/components'} className="max-md:hidden">
-            <Button
-              size="lg"
-              withArrow
-              variant="ghost">
+            <Button size="lg" withArrow variant="ghost">
               Components
             </Button>
           </Link>
