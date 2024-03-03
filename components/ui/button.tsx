@@ -109,7 +109,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           </motion.span>
         ) : (
           <>
-            <span className="button-content-wrapper">
+            <span className="button-content-wrapper flex items-center gap-1">
               {iconDirection === 'left' && icon}
               {children}
               {iconDirection === 'right' && icon}
