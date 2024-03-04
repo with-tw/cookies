@@ -36,7 +36,7 @@ export const ComponentPreview = forwardRef<
           variant="secondary"
           className="absolute top-2 right-2"
           onClick={() => setCodeView(!codeView)}>
-          View Code
+          {!codeView ? "View Code" : "See Preview"}
         </Button>
         {!codeView && children}
         {codeView && <CodeBlock>{code}</CodeBlock>}
