@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { ButtonDefaultExample } from './examples/button-examples';
 import { IconButtonDefaultExample } from './examples/icon-button-examples';
+import { InputDefaultExample } from './examples/input-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -23,5 +24,12 @@ export const ComponentsList: ComponentListItemType[] = [
       "Similar to button component and it's properties, but for icon-based actions.",
     path: '/components/icon-button',
     render: <IconButtonDefaultExample />,
+  },
+  {
+    name: 'Input',
+    description:
+      'A subtle and clean input component, with all the native properties.',
+    path: '/components/input',
+    render: <InputDefaultExample />,
   },
 ];

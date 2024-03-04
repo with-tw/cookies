@@ -9,6 +9,7 @@ type CodeRegisteryType =
   | 'utils'
   | 'button'
   | 'icon-button'
+  | 'input'
   | 'responsive-control';
 
 const OUTPUT_PATH = path.join(__dirname, '../package/registry/setup-code.tsx');
@@ -31,6 +32,10 @@ const FILES_TO_REGISTER: Record<
   'icon-button': {
     registerAt: 'components/ui/icon-button.tsx',
     path: path.join(__dirname, '../components/ui/icon-button.tsx'),
+  },
+  input: {
+    registerAt: 'components/ui/input.tsx',
+    path: path.join(__dirname, '../components/ui/input.tsx'),
   },
   'responsive-control': {
     registerAt: 'components/layouts/responsive-control.tsx',
@@ -57,6 +62,7 @@ export type CodeRegisteryType =
   | 'utils'
   | 'button'
   | 'icon-button'
+  | 'input'
   | 'responsive-control';
   
 export const SETUP_CODE: Record<CodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(setupCode, null, 2)};
