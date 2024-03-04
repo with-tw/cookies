@@ -71,10 +71,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           animationType === 'none' && 'transition-all',
           ButtonVariantStyles[variant],
           ButtonSizeStyles[size],
-          className,
           stretch && 'w-full',
           isLoading && 'cursor-default opacity-60 transition-all',
           disabled && 'cursor-not-allowed opacity-40',
+          className,
         )}
         onMouseEnter={(event) => {
           // toggling from chevron to arrow
