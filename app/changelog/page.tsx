@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { PageHeader } from '@/components/layouts/page-header';
 import { ChangelogContent, ChangelogContentType } from './logs';
 import { ResponsiveControl } from '@/components/layouts/responsive-control';
@@ -17,7 +17,7 @@ export default function Changelog() {
   return (
     <div className="changelog-page">
       <PageHeader>
-        <ResponsiveControl className='flex flex-row items-center justify-between'>
+        <ResponsiveControl className="flex flex-row items-center justify-between">
           <h2 className="font-semibold text-6xl">{'Changelog'}</h2>
         </ResponsiveControl>
       </PageHeader>
@@ -25,19 +25,20 @@ export default function Changelog() {
         <ResponsiveControl className="grid grid-cols-1 gap-12">
           {changelogData.map(
             (changelog: ChangelogContentType, index: number) => {
-              return <motion.div
-                key={index}
-                initial={{
-                  opacity: 0,
-                  y: 12 * (index + 1)
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0
-                }}
-              >
-                <ChangelogUpdate {...changelog} />
-              </motion.div>;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{
+                    opacity: 0,
+                    y: 12 * (index + 1),
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}>
+                  <ChangelogUpdate {...changelog} />
+                </motion.div>
+              );
             },
           )}
         </ResponsiveControl>
