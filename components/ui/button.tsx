@@ -2,7 +2,6 @@
 import { cn } from '@/helpers/utils';
 import { ArrowRight, ChevronRight, Loader2 } from 'lucide-react';
 import { ReactNode, forwardRef, useState } from 'react';
-
 import { motion } from 'framer-motion';
 import { ComponentAnimationType } from '@/components/configs/animation-config';
 import { ComponentAnimation } from '@/components/configs/animation-config';
