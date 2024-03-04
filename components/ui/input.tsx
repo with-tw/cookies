@@ -39,6 +39,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         className={cn(
           'px-3 py-2 rounded-xl border border-transparent bg-white/10 text-sm focus:outline-none focus:bg-white/15',
           'disabled:cursor-not-allowed disabled:brightness-75',
+          stretch && 'w-full',
           className,
         )}
         {...(args as MotionProps)}
