@@ -1,0 +1,93 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { Input } from '@/components/ui/input.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['input'].registerAt}>
+    {SETUP_CODE['input'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Input placeholder="Search for your location" className="w-[320px]" />`}
+  headline="Default Text Input"
+  description="This is the default input component with 'text' as type">
+  <Input placeholder="Search for your location" className="w-[320px]" />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Input
+  placeholder="Search for your location"
+  className="w-[260px]"
+  withLabel="Search Location"
+/>`}
+  headline="Text Input with Label (horizontal by-default)"
+  description="Input element with supporting label text, aligned horizontally by-default">
+  <Input
+    placeholder="Search for your location"
+    className="w-[260px]"
+    withLabel="Search Location"
+  />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Input
+  placeholder="Search for your location"
+  className="w-[260px]"
+  withLabel="Search Location"
+  labelDirection="v"
+/>`}
+  headline="Text Input with Label (vertical)"
+  description="Input element with supporting label text, aligned vertically">
+  <Input
+    placeholder="Search for your location"
+    className="w-[260px]"
+    withLabel="Search Location"
+    labelDirection="v"
+  />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Input
+  placeholder="Search for your location"
+  className="w-[320px]"
+  disabled
+/>`}
+  headline="Disabled Input"
+  description="This is the default input component with 'text' as type">
+  <Input
+    placeholder="Search for your location"
+    className="w-[320px]"
+    disabled
+  />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Input
+  placeholder="Mention you salary in $"
+  className="w-[320px]"
+  type="number"
+/>`}
+  headline="Number Input"
+  description="This is the number input">
+  <Input
+    placeholder="Mention you salary in $"
+    className="w-[320px]"
+    type="number"
+  />
+</ComponentPreview>
