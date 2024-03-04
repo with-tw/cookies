@@ -13,46 +13,68 @@ export const IconButtonDefaultExample = () => (
   </div>
 );
 
-export const IconButtonPrimaryExample = () => <IconButton>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonPrimaryExample = () => (
+  <IconButton>
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonPrimarySmallExample = () => <IconButton size='sm'>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonPrimarySmallExample = () => (
+  <IconButton size="sm">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonPrimaryLargeExample = () => <IconButton size="lg">
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonPrimaryLargeExample = () => (
+  <IconButton size="lg">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonSecondaryExample = () => <IconButton variant='secondary'>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonSecondaryExample = () => (
+  <IconButton variant="secondary">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonSecondarySmallExample = () => <IconButton variant='secondary' size='sm'>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonSecondarySmallExample = () => (
+  <IconButton variant="secondary" size="sm">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonSecondaryLargeExample = () => <IconButton variant='secondary' size='lg'>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonSecondaryLargeExample = () => (
+  <IconButton variant="secondary" size="lg">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonGhostExample = () => <IconButton variant="ghost">
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonGhostExample = () => (
+  <IconButton variant="ghost">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonGhostSmallExample = () => <IconButton variant="ghost" size='sm'>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonGhostSmallExample = () => (
+  <IconButton variant="ghost" size="sm">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonGhostLargeExample = () => <IconButton variant="ghost" size='lg'>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonGhostLargeExample = () => (
+  <IconButton variant="ghost" size="lg">
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonLoadingExample = () => <IconButton isLoading>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonLoadingExample = () => (
+  <IconButton isLoading>
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
 
-export const IconButtonDisabledExample = () => <IconButton disabled>
-  <Text className="h-4 w-4" />
-</IconButton>
+export const IconButtonDisabledExample = () => (
+  <IconButton disabled>
+    <Text className="h-4 w-4" />
+  </IconButton>
+);
