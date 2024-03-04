@@ -1,5 +1,8 @@
 import { forwardRef } from 'react';
-import { ComponentAnimation, ComponentAnimationType } from '../configs/animation-config';
+import {
+  ComponentAnimation,
+  ComponentAnimationType,
+} from '../configs/animation-config';
 import { MotionProps, motion } from 'framer-motion';
 import { cn } from '@/helpers/utils';
 import { Loader2 } from 'lucide-react';
@@ -56,7 +59,8 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         whileTap={{
           scale: isLoading || disabled ? 1 : 0.9,
         }}
-        className={cn('outline-none',
+        className={cn(
+          'outline-none',
           !disabled && 'hover:brightness-110 active:brightness-90',
           animationType === 'none' && 'transition-all',
           IconButtonVariantStyles[variant],
@@ -64,7 +68,7 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
           stretch && 'w-full',
           isLoading && 'cursor-default opacity-60 transition-all',
           disabled && 'cursor-not-allowed opacity-40',
-          className
+          className,
         )}
         {...(args as MotionProps)}>
         {!isLoading && children}

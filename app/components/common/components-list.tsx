@@ -15,12 +15,13 @@ export const ComponentsList: ComponentListItemType[] = [
     description:
       'A framer-motion supported button with size and design variants.',
     path: '/components/button',
-    render: <ButtonDefaultExample />
+    render: <ButtonDefaultExample />,
   },
   {
-    name: "Icon Button",
-    description: "Similar to button component and it's properties, but for icon-based actions.",
+    name: 'Icon Button',
+    description:
+      "Similar to button component and it's properties, but for icon-based actions.",
     path: '/components/icon-button',
-    render: <IconButtonDefaultExample />
-  }
+    render: <IconButtonDefaultExample />,
+  },
 ];
