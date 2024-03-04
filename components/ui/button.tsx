@@ -63,7 +63,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           ...ComponentAnimation[animationType].animate,
         }}
         whileTap={{
-          scale: 0.9,
+          scale: (isLoading || disabled) ? 1 : 0.9,
         }}
         ref={ref}
         className={cn(
@@ -94,35 +94,32 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           }
         }}
         {...(args as unknown as any)}>
-        {isLoading ? (
-          <motion.span
-            key={'loader-wrapper'}
-            initial={{
-              opacity: 0,
-              y: 12,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}>
-            <Loader2 className="h-4 w-4 animate-spin" />
-          </motion.span>
-        ) : (
-          <>
-            <span className="button-content-wrapper flex items-center gap-1">
-              {iconDirection === 'left' && icon}
-              {children}
-              {iconDirection === 'right' && icon}
-            </span>
-            {withArrow &&
-              (!hovering ? (
-                <ChevronRight className="h-4 w-4" />
-              ) : (
-                <ArrowRight className="h-4 w-4 animate-pulse" />
-              ))}
-          </>
-        )}
-      </motion.button>
+        <span className="button-content-wrapper flex items-center gap-2">
+          {isLoading && (
+            <motion.span
+              key={'loader-wrapper'}
+              initial={{
+                opacity: 0,
+                y: 12,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}>
+              <Loader2 className="h-4 w-4 animate-spin" />
+            </motion.span>
+          )}
+          {iconDirection === 'left' && icon}
+          {children}
+          {iconDirection === 'right' && icon}
+        </span>
+        {withArrow &&
+          (!hovering ? (
+            <ChevronRight className="h-4 w-4" />
+          ) : (
+            <ArrowRight className="h-4 w-4 animate-pulse" />
+          ))}
+      </motion.button >
     );
   },
 );
