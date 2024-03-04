@@ -1,21 +1,44 @@
+'use client';
 import { PageHeader } from '@/components/layouts/page-header';
 import { ChangelogContent, ChangelogContentType } from './logs';
 import { ResponsiveControl } from '@/components/layouts/responsive-control';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Changelog() {
+  const [changelogData, setChangelog] = useState<ChangelogContentType[]>([]);
+
+  useEffect(() => {
+    const data: ChangelogContentType[] = ChangelogContent.slice().reverse();
+    setChangelog(data as ChangelogContentType[]);
+  }, []);
+
   return (
     <div className="changelog-page">
       <PageHeader>
-        <ResponsiveControl>
+        <ResponsiveControl className="flex flex-row items-center justify-between">
           <h2 className="font-semibold text-6xl">{'Changelog'}</h2>
         </ResponsiveControl>
       </PageHeader>
       <div className="changelog-updates-container mt-12 relative z-30">
         <ResponsiveControl className="grid grid-cols-1 gap-12">
-          {ChangelogContent.reverse().map(
+          {changelogData.map(
             (changelog: ChangelogContentType, index: number) => {
-              return <ChangelogUpdate key={index} {...changelog} />;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{
+                    opacity: 0,
+                    y: 12 * (index + 1),
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}>
+                  <ChangelogUpdate {...changelog} />
+                </motion.div>
+              );
             },
           )}
         </ResponsiveControl>

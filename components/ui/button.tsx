@@ -2,10 +2,9 @@
 import { cn } from '@/helpers/utils';
 import { ArrowRight, ChevronRight, Loader2 } from 'lucide-react';
 import { ReactNode, forwardRef, useState } from 'react';
-
 import { motion } from 'framer-motion';
-import { ComponentAnimationType } from '../configs/animation-config';
-import { ComponentAnimation } from '../configs/animation-config';
+import { ComponentAnimationType } from '@/components/configs/animation-config';
+import { ComponentAnimation } from '@/components/configs/animation-config';
 
 export type ButtonVariantType = 'primary' | 'secondary' | 'ghost';
 export type ButtonSizeType = 'sm' | 'md' | 'lg';
@@ -42,7 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       variant = 'primary',
       size = 'md',
-      icon = null,
+      icon = <></>,
       iconDirection = 'left',
       withArrow = false,
       stretch = false,
@@ -63,7 +62,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           ...ComponentAnimation[animationType].animate,
         }}
         whileTap={{
-          scale: 0.9,
+          scale: isLoading || disabled ? 1 : 0.9,
         }}
         ref={ref}
         className={cn(
@@ -74,7 +73,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           ButtonSizeStyles[size],
           className,
           stretch && 'w-full',
-          isLoading && 'cursor-default opacity-60',
+          isLoading && 'cursor-default opacity-60 transition-all',
           disabled && 'cursor-not-allowed opacity-40',
         )}
         onMouseEnter={(event) => {
@@ -94,34 +93,31 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           }
         }}
         {...(args as unknown as any)}>
-        {isLoading ? (
-          <motion.span
-            key={'loader-wrapper'}
-            initial={{
-              opacity: 0,
-              y: 12,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}>
-            <Loader2 className="h-4 w-4 animate-spin" />
-          </motion.span>
-        ) : (
-          <>
-            <span className="button-content-wrapper flex items-center gap-1">
-              {iconDirection === 'left' && icon}
-              {children}
-              {iconDirection === 'right' && icon}
-            </span>
-            {withArrow &&
-              (!hovering ? (
-                <ChevronRight className="h-4 w-4" />
-              ) : (
-                <ArrowRight className="h-4 w-4 animate-pulse" />
-              ))}
-          </>
-        )}
+        <span className="button-content-wrapper flex items-center gap-2">
+          {isLoading && (
+            <motion.span
+              key={'loader-wrapper'}
+              initial={{
+                opacity: 0,
+                y: 12,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}>
+              <Loader2 className="h-4 w-4 animate-spin" />
+            </motion.span>
+          )}
+          {iconDirection === 'left' && icon}
+          {children}
+          {iconDirection === 'right' && icon}
+        </span>
+        {withArrow &&
+          (!hovering ? (
+            <ChevronRight className="h-4 w-4" />
+          ) : (
+            <ArrowRight className="h-4 w-4 animate-pulse" />
+          ))}
       </motion.button>
     );
   },

@@ -23,7 +23,9 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
         className={cn(
           'code-block font-mono bg-black/30 rounded-xl relative min-w-[600px] w-fit border border-neutral-700 shadow-lg',
           !fileName && 'p-6',
-          viewMore ? 'h-fit overflow-hidden' : 'max-h-[300px] overflow-hidden',
+          viewMore
+            ? 'h-fit max-h-[600px] overflow-scroll'
+            : 'max-h-[300px] overflow-hidden',
           'max-md:min-w-[300px] max-md:w-full max-md:overflow-scroll',
           className,
         )}
@@ -57,7 +59,7 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
           <Button
             variant="secondary"
             size="sm"
-            className="absolute z-40 bottom-2 right-2"
+            className="sticky bottom-2 right-2 ml-auto"
             onClick={() => setViewMore(!viewMore)}>
             {' '}
             {viewMore ? 'View less' : 'View more'}
