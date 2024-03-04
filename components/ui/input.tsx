@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '@/helpers/utils';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import { MotionProps, motion } from 'framer-motion';
 import {
   ComponentAnimation,
