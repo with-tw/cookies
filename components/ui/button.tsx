@@ -4,8 +4,8 @@ import { ArrowRight, ChevronRight, Loader2 } from 'lucide-react';
 import { ReactNode, forwardRef, useState } from 'react';
 
 import { motion } from 'framer-motion';
-import { ComponentAnimationType } from '../configs/animation-config';
-import { ComponentAnimation } from '../configs/animation-config';
+import { ComponentAnimationType } from '@/components/configs/animation-config';
+import { ComponentAnimation } from '@/components/configs/animation-config';
 
 export type ButtonVariantType = 'primary' | 'secondary' | 'ghost';
 export type ButtonSizeType = 'sm' | 'md' | 'lg';
@@ -63,7 +63,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           ...ComponentAnimation[animationType].animate,
         }}
         whileTap={{
-          scale: (isLoading || disabled) ? 1 : 0.9,
+          scale: isLoading || disabled ? 1 : 0.9,
         }}
         ref={ref}
         className={cn(
@@ -119,7 +119,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           ) : (
             <ArrowRight className="h-4 w-4 animate-pulse" />
           ))}
-      </motion.button >
+      </motion.button>
     );
   },
 );
