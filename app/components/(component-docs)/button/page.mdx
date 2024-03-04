@@ -70,6 +70,21 @@ import { ComponentManualSetup } from '@/components/sections/component-manual-set
 <div class="py-12" />
 
 <ComponentPreview
+  code={`<Button icon={}>Button With Icon</Button>`}
+  headline="Button with icon"
+  description="Button component with leading icon. With iconDirection you can manage the icon placement."
+  className="flex flex-row items-center justify-center gap-4">
+  <Button icon={<>🍪</>} iconDirection="left">
+    Button With Icon Left
+  </Button>
+  <Button icon={<>🍪</>} iconDirection="right">
+    Button With Icon Right
+  </Button>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
   code={`<Button variant="primary" size="sm">Small Primary Button</Button>`}
   headline="Small Primary Button"
   description="Primary Button with small size">

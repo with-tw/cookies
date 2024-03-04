@@ -42,7 +42,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       variant = 'primary',
       size = 'md',
-      icon = null,
+      icon = <></>,
       iconDirection = 'left',
       withArrow = false,
       stretch = false,
