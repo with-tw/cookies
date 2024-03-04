@@ -1,0 +1,148 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+import {
+  IconButtonDefaultExample,
+  IconButtonPrimaryExample,
+  IconButtonPrimarySmallExample,
+  IconButtonPrimaryLargeExample,
+  IconButtonSecondaryExample,
+  IconButtonSecondarySmallExample,
+  IconButtonSecondaryLargeExample,
+  IconButtonGhostExample,
+  IconButtonGhostSmallExample,
+  IconButtonGhostLargeExample,
+  IconButtonLoadingExample,
+  IconButtonDisabledExample,
+} from '@/app/components/common/examples/icon-button-examples.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['icon-button'].registerAt}>
+    {SETUP_CODE['icon-button'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Primary Icon Button"
+  description="This is the default/primary icon button design, with subtle blue gradient effect">
+  <IconButtonPrimaryExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton variant='secondary'>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Secondary Icon Button"
+  description="This is the secondary icon button, with subtle background">
+  <IconButtonSecondaryExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton variant="ghost">
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Ghost Icon Button"
+  description="This is the ghost icon button, with trasnparent background and subtle white themed background on interaction">
+  <IconButtonGhostExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton isLoading>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Loading Icon Button"
+  description="Icon button has support to loading state">
+  <IconButtonLoadingExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton disabled>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Disabled Icon Button"
+  description="Icon button has support to disabled state">
+  <IconButtonDisabledExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton size='sm'>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Primary Icon Button Small"
+  description="Primary icon button with small size">
+  <IconButtonPrimarySmallExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton variant='secondary' size='sm'>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Secondary Icon Button Small"
+  description="Secondary icon button with small size">
+  <IconButtonSecondarySmallExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton variant="ghost" size='sm'>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Ghost Icon Button Small"
+  description="Ghost icon button with small size">
+  <IconButtonGhostSmallExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton size="lg">
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Primary Icon Button Large"
+  description="Primary icon button with Large size">
+  <IconButtonPrimaryLargeExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton variant='secondary' size='lg'>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Secondary Icon Button Large"
+  description="Secondary icon button with Large size">
+  <IconButtonSecondaryLargeExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<IconButton variant="ghost" size='lg'>
+  <Text className="h-4 w-4" />
+</IconButton>`}
+  headline="Ghost Icon Button Large"
+  description="Ghost icon button with Large size">
+  <IconButtonGhostLargeExample />
+</ComponentPreview>

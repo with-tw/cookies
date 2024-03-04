@@ -1,8 +1,9 @@
+"use client";
 import { forwardRef } from 'react';
 import {
   ComponentAnimation,
   ComponentAnimationType,
-} from '../configs/animation-config';
+} from '@/components/configs/animation-config';
 import { MotionProps, motion } from 'framer-motion';
 import { cn } from '@/helpers/utils';
 import { Loader2 } from 'lucide-react';
