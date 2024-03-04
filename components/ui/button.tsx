@@ -73,7 +73,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           ButtonSizeStyles[size],
           className,
           stretch && 'w-full',
-          isLoading && 'cursor-default opacity-60',
+          isLoading && 'cursor-default opacity-60 transition-all',
           disabled && 'cursor-not-allowed opacity-40',
         )}
         onMouseEnter={(event) => {
