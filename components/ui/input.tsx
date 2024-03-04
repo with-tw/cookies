@@ -5,7 +5,7 @@ import { MotionProps, motion } from 'framer-motion';
 import {
   ComponentAnimation,
   ComponentAnimationType,
-} from '../configs/animation-config';
+} from '@/components/configs/animation-config';
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
