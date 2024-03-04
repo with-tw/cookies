@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { ButtonDefaultExample } from './examples/button-examples';
 import { IconButtonDefaultExample } from './examples/icon-button-examples';
 import { InputDefaultExample } from './examples/input-examples';
+import { CardExample } from './examples/card-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -31,5 +32,12 @@ export const ComponentsList: ComponentListItemType[] = [
       'A subtle and clean input component, with all the native properties.',
     path: '/components/input',
     render: <InputDefaultExample />,
+  },
+  {
+    name: 'Card',
+    description:
+      'A sleek looking card container with added header and footer layout',
+    path: '/components/card',
+    render: <CardExample />,
   },
 ];

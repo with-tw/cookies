@@ -1,0 +1,90 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardFooter,
+  CardHeaderTitle,
+  CardHeaderDescription,
+} from '@/components/ui/card.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['card'].registerAt}>
+    {SETUP_CODE['card'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Card className="w-[600px]">
+  <CardHeader>
+    <CardHeaderTitle>Card Header Title</CardHeaderTitle>
+    <CardHeaderDescription>Card Header Description</CardHeaderDescription>
+  </CardHeader>
+  <CardContent>Card Content</CardContent>
+  <CardFooter>Card Footer Content</CardFooter>
+</Card>`}
+  headline="Card Component Structure"
+  description="Outline of the card component">
+  <Card className="w-[600px]">
+    <CardHeader>
+      <CardHeaderTitle>Card Header Title</CardHeaderTitle>
+      <CardHeaderDescription>Card Header Description</CardHeaderDescription>
+    </CardHeader>
+    <CardContent>Card Content</CardContent>
+    <CardFooter>Card Footer Content</CardFooter>
+  </Card>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Card className="w-[500px]">
+  <CardContent>
+    Welcome to cookies -- It is a collection of boilerplate components and UI
+    examples.
+  </CardContent>
+</Card>`}
+  headline="Simple Card as a wrapper"
+  description="Using card as a simple and clean wrapper to wrap content">
+  <Card className="w-[500px]">
+    <CardContent>
+      Welcome to cookies -- It is a collection of boilerplate components and UI
+      examples.
+    </CardContent>
+  </Card>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Card className="w-[360px]">
+  <CardHeader>
+    <CardHeaderTitle>Posted in #frontend</CardHeaderTitle>
+  </CardHeader>
+  <CardContent className="grid grid-cols-1 gap-4">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
+    nostrum iste doloremque eaque vel odio vitae inventore
+  </CardContent>
+  <CardFooter>{'Posted by @yashsehgal'}</CardFooter>
+</Card>`}
+  headline="Card with header and footer content"
+  description="Using card with header and footer content, making everything look easy to understand">
+  <Card className="w-[360px]">
+    <CardHeader>
+      <CardHeaderTitle>Posted in #frontend</CardHeaderTitle>
+    </CardHeader>
+    <CardContent className="grid grid-cols-1 gap-4">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus,
+      nostrum iste doloremque eaque vel odio vitae inventore
+    </CardContent>
+    <CardFooter>{'Posted by @yashsehgal'}</CardFooter>
+  </Card>
+</ComponentPreview>
