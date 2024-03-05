@@ -1,0 +1,66 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { Switch } from '@/components/ui/switch.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['switch'].registerAt}>
+    {SETUP_CODE['switch'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview code={`<Switch />`} headline="Switch">
+  <Switch />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Switch withLabel="Make account private" labelDirection="hl" />`}
+  headline="Switch with label (horizontal-left)">
+  <Switch withLabel="Make account private" labelDirection="hl" />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Switch withLabel="Make account private" labelDirection="hr" />`}
+  headline="Switch with label (horizontal-right)">
+  <Switch withLabel="Make account private" labelDirection="hr" />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Switch withLabel="Make account private" labelDirection="v" />`}
+  headline="Switch with label (vertical)">
+  <Switch withLabel="Make account private" labelDirection="v" />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Switch disabled />`}
+  headline="Disabled Switch (un-checked)">
+  <Switch disabled />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Switch disabled isChecked/>`}
+  headline="Disabled Switch (checked)">
+  <Switch disabled isChecked />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview code={`<Switch hasLoading />`} headline="Switch with loading">
+  <Switch hasLoading />
+</ComponentPreview>

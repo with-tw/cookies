@@ -11,7 +11,7 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   stretch?: boolean;
   withLabel?: string;
-  labelDirection?: 'h' | 'v';
+  labelDirection?: 'hl' | 'v';
   animationType?: ComponentAnimationType;
 }
 
