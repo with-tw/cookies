@@ -3,6 +3,7 @@ import { ButtonDefaultExample } from './examples/button-examples';
 import { IconButtonDefaultExample } from './examples/icon-button-examples';
 import { InputDefaultExample } from './examples/input-examples';
 import { CardExample } from './examples/card-examples';
+import { SwitchDefaultExample } from './examples/switch-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -39,5 +40,11 @@ export const ComponentsList: ComponentListItemType[] = [
       'A sleek looking card container with added header and footer layout',
     path: '/components/card',
     render: <CardExample />,
+  },
+  {
+    name: 'Switch',
+    description: 'A native working switch component',
+    path: '/components/switch',
+    render: <SwitchDefaultExample />,
   },
 ];
