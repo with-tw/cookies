@@ -82,7 +82,7 @@ export const CardHeaderDescription = forwardRef<
     <p
       ref={ref}
       className={cn(
-        'card-header-paragraph text-sm text-neutral-600',
+        'card-header-paragraph text-base text-neutral-600',
         className,
       )}
       {...args}
