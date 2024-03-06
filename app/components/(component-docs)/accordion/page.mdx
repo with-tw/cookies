@@ -1,0 +1,132 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from '@/components/ui/accordion.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+import { AccordionWithAnimationInContent } from '@/app/components/common/examples/accordion-examples.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['accordion'].registerAt}>
+    {SETUP_CODE['accordion'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Accordion type="single" collapsible>
+  <AccordionItem value="demo">
+    <AccordionTrigger>Demo Accordion</AccordionTrigger>
+    <AccordionContent>This is a demo accordion content</AccordionContent>
+  </AccordionItem>
+</Accordion>`}
+  headline="Accordion Example">
+  <Accordion type="single" collapsible>
+    <AccordionItem value="demo">
+      <AccordionTrigger>Demo Accordion</AccordionTrigger>
+      <AccordionContent>This is a demo accordion content</AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Accordion type="single" collapsible>
+  <AccordionItem value="demo-1">
+    <AccordionTrigger>Demo Accordion 01</AccordionTrigger>
+    <AccordionContent>This is a demo accordion content</AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="demo-2">
+    <AccordionTrigger>Demo Accordion 02</AccordionTrigger>
+    <AccordionContent>This is a demo accordion content</AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="demo-3">
+    <AccordionTrigger>Demo Accordion 03</AccordionTrigger>
+    <AccordionContent>This is a demo accordion content</AccordionContent>
+  </AccordionItem>
+  </Accordion>`}
+  headline="Accordion with multiple items (single item at a time)">
+  <Accordion type="single" collapsible>
+    <AccordionItem value="demo-1">
+      <AccordionTrigger>Demo Accordion 01</AccordionTrigger>
+      <AccordionContent>This is a demo accordion content</AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="demo-2">
+      <AccordionTrigger>Demo Accordion 02</AccordionTrigger>
+      <AccordionContent>This is a demo accordion content</AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="demo-3">
+      <AccordionTrigger>Demo Accordion 03</AccordionTrigger>
+      <AccordionContent>This is a demo accordion content</AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Accordion type="multiple" collapsible>
+  <AccordionItem value="demo-1">
+    <AccordionTrigger>Demo Accordion 01</AccordionTrigger>
+    <AccordionContent>This is a demo accordion content</AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="demo-2">
+    <AccordionTrigger>Demo Accordion 02</AccordionTrigger>
+    <AccordionContent>This is a demo accordion content</AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="demo-3">
+    <AccordionTrigger>Demo Accordion 03</AccordionTrigger>
+    <AccordionContent>This is a demo accordion content</AccordionContent>
+  </AccordionItem>
+</Accordion>`}
+  headline="Accordion with multiple items (multiple item at a time)">
+  <Accordion type="multiple" collapsible>
+    <AccordionItem value="demo-1">
+      <AccordionTrigger>Demo Accordion 01</AccordionTrigger>
+      <AccordionContent>This is a demo accordion content</AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="demo-2">
+      <AccordionTrigger>Demo Accordion 02</AccordionTrigger>
+      <AccordionContent>This is a demo accordion content</AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="demo-3">
+      <AccordionTrigger>Demo Accordion 03</AccordionTrigger>
+      <AccordionContent>This is a demo accordion content</AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Accordion type="single" collapsible>
+  <AccordionItem value="feature-1">
+    <AccordionTrigger>
+      Accessible
+    </AccordionTrigger>
+    <AccordionContent animationType={animation}>
+      Fully accessible using keyboard
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="feature-2">
+    <AccordionTrigger>
+      Clean Design
+    </AccordionTrigger>
+    <AccordionContent animationType={animation}>
+      Has a clean design with option to open 
+      single/multiple content at a time.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>`}
+  headline="Accordion with animation example">
+  <AccordionWithAnimationInContent />
+</ComponentPreview>

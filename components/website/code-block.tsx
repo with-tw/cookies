@@ -21,11 +21,9 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
       <div
         ref={ref}
         className={cn(
-          'code-block font-mono bg-black/30 rounded-xl relative min-w-[600px] w-fit border border-neutral-700 shadow-lg',
+          'code-block font-mono bg-black/30 rounded-xl relative min-w-[600px] w-fit border border-neutral-700 shadow-lg overflow-scroll',
           !fileName && 'p-6',
-          viewMore
-            ? 'h-fit max-h-[600px] overflow-scroll'
-            : 'max-h-[300px] overflow-hidden',
+          viewMore ? 'h-fit max-h-[600px]' : 'max-h-[300px]',
           'max-md:min-w-[300px] max-md:w-full max-md:overflow-scroll',
           className,
         )}
