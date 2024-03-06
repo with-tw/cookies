@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import {
   ComponentAnimation,
   ComponentAnimationType,
-} from '../configs/animation-config';
+} from '@/components/configs/animation-config';
 
 export const Accordion = forwardRef<
   React.ElementRef<typeof RadixAccordion.Root>,
