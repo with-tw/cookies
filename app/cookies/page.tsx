@@ -1,5 +1,6 @@
-import { PageHeader } from "@/components/layouts/page-header";
-import { ResponsiveControl } from "@/components/layouts/responsive-control";
+import AuthenticationForm from '@/components/cookies/authentication-form';
+import { PageHeader } from '@/components/layouts/page-header';
+import { ResponsiveControl } from '@/components/layouts/responsive-control';
 
 export default function CookiesPage() {
   return (
@@ -10,8 +11,8 @@ export default function CookiesPage() {
         </ResponsiveControl>
       </PageHeader>
       <div className="cookies-list-container mt-12">
-
+        <AuthenticationForm />
       </div>
     </div>
-  )
+  );
 }

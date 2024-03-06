@@ -64,7 +64,7 @@ export const CardHeaderTitle = forwardRef<
     <h3
       ref={ref}
       className={cn(
-        'card-header-title text-xl font-medium leading-snug',
+        'card-header-title text-2xl font-medium leading-snug',
         className,
       )}
       {...args}
@@ -82,7 +82,7 @@ export const CardHeaderDescription = forwardRef<
     <p
       ref={ref}
       className={cn(
-        'card-header-paragraph text-base text-neutral-600',
+        'card-header-description text-sm text-neutral-600',
         className,
       )}
       {...args}
