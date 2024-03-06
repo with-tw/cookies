@@ -22,4 +22,15 @@ export const ChangelogContent: ChangelogContentType[] = [
       'Configured Posthog for user analysis',
     ],
   },
+  {
+    version: '0.3',
+    features: [
+      'Fixing styles and changes in button and docs',
+      'Adding IconButton to components',
+      'Fix button example with icon in docs',
+      '🍪 Adding Input component to package/registry',
+      '💄 Add card component to collection <> Docs update',
+      '💄 Create switch components for collection',
+    ],
+  },
 ];
