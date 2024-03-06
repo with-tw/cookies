@@ -4,6 +4,7 @@ import { IconButtonDefaultExample } from './examples/icon-button-examples';
 import { InputDefaultExample } from './examples/input-examples';
 import { CardExample } from './examples/card-examples';
 import { SwitchDefaultExample } from './examples/switch-examples';
+import { AccordionDefaultExample } from './examples/accordion-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -46,5 +47,12 @@ export const ComponentsList: ComponentListItemType[] = [
     description: 'A native working switch component',
     path: '/components/switch',
     render: <SwitchDefaultExample />,
+  },
+  {
+    name: 'Accordion',
+    description:
+      'Fully functional, accessible and responsive accordion component.',
+    path: '/components/accordion',
+    render: <AccordionDefaultExample />,
   },
 ];
