@@ -15,3 +15,21 @@ body {
   @apply h-screen bg-gradient-to-b from-neutral-950 to-neutral-900;
   @apply overflow-x-hidden;
 }
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+body {
+  overflow: scroll; /* or auto */
+}
+
+/* Optionally, you can add styles for Firefox and other browsers */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
