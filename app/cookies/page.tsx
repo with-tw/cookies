@@ -1,6 +1,7 @@
-import AuthenticationForm from '@/components/cookies/authentication-form';
 import { PageHeader } from '@/components/layouts/page-header';
 import { ResponsiveControl } from '@/components/layouts/responsive-control';
+import { ComponentBlock } from '@/components/website/component-block';
+import { CookiesList, CookiesListItemType } from './common/cookies-list';
 
 export default function CookiesPage() {
   return (
@@ -11,7 +12,17 @@ export default function CookiesPage() {
         </ResponsiveControl>
       </PageHeader>
       <div className="cookies-list-container mt-12">
-        <AuthenticationForm />
+        <ResponsiveControl className="grid grid-cols-3 gap-6 gap-y-16 max-xl:grid-cols-2 max-md:grid-cols-1">
+          {CookiesList.map((component: CookiesListItemType, index: number) => {
+            return (
+              <ComponentBlock
+                key={index}
+                componentData={component}
+                animationThreshold={index}
+              />
+            );
+          })}
+        </ResponsiveControl>
       </div>
     </div>
   );

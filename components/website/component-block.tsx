@@ -16,7 +16,20 @@ export interface ComponentBlockProps
 }
 
 export const ComponentBlock = forwardRef<HTMLDivElement, ComponentBlockProps>(
-  ({ className, componentData, animationThreshold = 1, ...args }, ref) => {
+  (
+    {
+      className,
+      componentData: {
+        name: componentName,
+        description: componentDescription,
+        path: componentPath,
+        render: componentRender = null,
+      },
+      animationThreshold = 1,
+      ...args
+    },
+    ref,
+  ) => {
     return (
       <motion.div
         ref={ref}
@@ -30,13 +43,13 @@ export const ComponentBlock = forwardRef<HTMLDivElement, ComponentBlockProps>(
           opacity: 1,
           y: 0,
         }}>
-        <Link href={componentData.path}>
+        <Link href={componentPath}>
           <div className="h-[180px] w-full rounded-xl flex flex-row items-center justify-center bg-white/10">
-            {componentData.render}
+            {componentRender}
           </div>
-          <div className="component-details-wrapper mt-4">
-            <p className="font-medium text-lg">{componentData.name}</p>
-            <p className="text-white/40">{componentData.description}</p>
+          <div className={cn('component-details-wrapper mt-4')}>
+            <p className="font-medium text-lg">{componentName}</p>
+            <p className="text-white/40">{componentDescription}</p>
           </div>
         </Link>
       </motion.div>
