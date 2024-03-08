@@ -5,9 +5,14 @@ import { ResponsiveControl } from '@/components/layouts/responsive-control';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import posthog from 'posthog-js';
 
 export default function Changelog() {
   const [changelogData, setChangelog] = useState<ChangelogContentType[]>([]);
+
+  useEffect(() => {
+    posthog.capture('changelog');
+  }, []);
 
   useEffect(() => {
     const data: ChangelogContentType[] = ChangelogContent.slice().reverse();
