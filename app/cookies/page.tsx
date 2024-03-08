@@ -1,9 +1,15 @@
+'use client';
 import { PageHeader } from '@/components/layouts/page-header';
 import { ResponsiveControl } from '@/components/layouts/responsive-control';
 import { ComponentBlock } from '@/components/website/component-block';
 import { CookiesList, CookiesListItemType } from './common/cookies-list';
+import { useEffect } from 'react';
+import posthog from 'posthog-js';
 
 export default function CookiesPage() {
+  useEffect(() => {
+    posthog.capture('cookies');
+  }, []);
   return (
     <div className="cookies-page relative z-50">
       <PageHeader>

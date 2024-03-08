@@ -3,6 +3,7 @@ import { cn } from '@/helpers/utils';
 import { ReactNode, forwardRef } from 'react';
 import { MotionProps, motion } from 'framer-motion';
 import Link from 'next/link';
+import posthog from 'posthog-js';
 
 export interface ComponentBlockProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -42,7 +43,8 @@ export const ComponentBlock = forwardRef<HTMLDivElement, ComponentBlockProps>(
         animate={{
           opacity: 1,
           y: 0,
-        }}>
+        }}
+        onClick={() => posthog.capture(componentName)}>
         <Link href={componentPath}>
           <div className="h-[180px] w-full rounded-xl flex flex-row items-center justify-center bg-white/10">
             {componentRender}
