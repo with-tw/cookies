@@ -3,6 +3,7 @@ import { cn } from '@/helpers/utils';
 import { forwardRef, useState } from 'react';
 import { copyToClipboard } from '@/helpers/copy-to-clipboard';
 import { Button } from '../ui/button';
+import posthog from 'posthog-js';
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   fileName?: string;
@@ -38,6 +39,7 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
                 copyToClipboard(children as string);
                 setCTC(true);
                 setTimeout(() => setCTC(false), 1500);
+                posthog.capture(`copy_${fileName}`);
               }}>
               {ctc ? 'Copied' : 'Copy'}
             </Button>
@@ -58,7 +60,11 @@ export const CodeBlock = forwardRef<HTMLDivElement, CodeBlockProps>(
             variant="secondary"
             size="sm"
             className="sticky bottom-2 right-2 ml-auto"
-            onClick={() => setViewMore(!viewMore)}>
+            onClick={() => {
+              setViewMore(!viewMore);
+              posthog.capture(`viewmore`);
+              posthog.capture(`viewmore_${fileName}`);
+            }}>
             {' '}
             {viewMore ? 'View less' : 'View more'}
           </Button>
