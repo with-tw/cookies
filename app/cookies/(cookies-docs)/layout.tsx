@@ -9,7 +9,7 @@ export default function CookiesDocsLayout({
   return (
     <div className="cookies-docs-layout markdown-content">
       <ResponsiveControl className="relative">
-        <div className="w-[800px] max-xl:w-full">{children}</div>
+        <div className="max-xl:w-full">{children}</div>
       </ResponsiveControl>
     </div>
   );
