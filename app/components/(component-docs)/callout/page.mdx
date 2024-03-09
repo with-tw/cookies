@@ -1,0 +1,59 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { Callout } from '@/components/ui/callout.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['callout'].registerAt}>
+    {SETUP_CODE['callout'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Callout>This is an info callout</Callout>`}
+  headline="Callout Info"
+  description="This is the callout component with info variant">
+  <Callout variant="info">This is an info callout</Callout>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Callout variant="warning">This is an warning callout</Callout>`}
+  headline="Callout Warning"
+  description="This is the callout component with warning variant">
+  <Callout variant="warning">This is an warning callout</Callout>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Callout variant="error">This is an error callout</Callout>`}
+  headline="Callout Error"
+  description="This is the callout component with error variant">
+  <Callout variant="error">This is an error callout</Callout>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Callout variant="success">This is an success callout</Callout>`}
+  headline="Callout Success"
+  description="This is the callout component with success variant">
+  <Callout variant="success">This is an success callout</Callout>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Callout variant="subtle">This is an subtle callout</Callout>`}
+  headline="Callout Subtle"
+  description="This is the callout component with subtle variant">
+  <Callout variant="subtle">This is an subtle callout</Callout>
+</ComponentPreview>

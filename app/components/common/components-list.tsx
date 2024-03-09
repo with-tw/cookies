@@ -5,6 +5,7 @@ import { InputDefaultExample } from './examples/input-examples';
 import { CardExample } from './examples/card-examples';
 import { SwitchDefaultExample } from './examples/switch-examples';
 import { AccordionDefaultExample } from './examples/accordion-examples';
+import { CalloutExample } from './examples/callout-example';
 
 export type ComponentListItemType = {
   name: string;
@@ -54,5 +55,12 @@ export const ComponentsList: ComponentListItemType[] = [
       'Fully functional, accessible and responsive accordion component.',
     path: '/components/accordion',
     render: <AccordionDefaultExample />,
+  },
+  {
+    name: 'Callout',
+    description:
+      'Callout component with multiple variants covering various use cases.',
+    path: '/components/callout',
+    render: <CalloutExample />,
   },
 ];
