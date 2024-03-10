@@ -95,7 +95,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
             className="text-sm font-medium text-neutral-200">
             {withLabel}
           </label>
-          {switchElement} {hasLoading && loader}
+          {switchElement} {hasLoading ? loader : <></>}
         </div>
       );
     } else {
