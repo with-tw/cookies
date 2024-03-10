@@ -5,6 +5,7 @@ import { ComponentBlock } from '@/components/website/component-block';
 import { CookiesList, CookiesListItemType } from './common/cookies-list';
 import { useEffect } from 'react';
 import posthog from 'posthog-js';
+import { CookieBlock } from '@/components/website/cookie-block';
 
 export default function CookiesPage() {
   useEffect(() => {
@@ -19,11 +20,11 @@ export default function CookiesPage() {
       </PageHeader>
       <div className="cookies-list-container mt-12">
         <ResponsiveControl className="grid grid-cols-3 gap-6 gap-y-16 max-xl:grid-cols-2 max-md:grid-cols-1">
-          {CookiesList.map((component: CookiesListItemType, index: number) => {
+          {CookiesList.map((cookie: CookiesListItemType, index: number) => {
             return (
-              <ComponentBlock
+              <CookieBlock
                 key={index}
-                componentData={component}
+                cookieData={cookie}
                 animationThreshold={index}
               />
             );
