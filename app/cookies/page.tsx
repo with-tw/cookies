@@ -1,7 +1,6 @@
 'use client';
 import { PageHeader } from '@/components/layouts/page-header';
 import { ResponsiveControl } from '@/components/layouts/responsive-control';
-import { ComponentBlock } from '@/components/website/component-block';
 import { CookiesList, CookiesListItemType } from './common/cookies-list';
 import { useEffect } from 'react';
 import posthog from 'posthog-js';
