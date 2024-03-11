@@ -10,7 +10,7 @@ export const CookiePreview = forwardRef<HTMLDivElement, CookiePreviewProps>(
       <div
         ref={ref}
         className={cn(
-          'flex flex-row items-center justify-center p-12 rounded-2xl bg-white/10 border border-neutral-100/10 shadow-lg',
+          'flex flex-row items-center justify-center p-12 rounded-2xl bg-neutral-900 shadow-lg',
           className,
         )}
         {...args}

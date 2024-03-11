@@ -5,7 +5,7 @@ import { InputDefaultExample } from './examples/input-examples';
 import { CardExample } from './examples/card-examples';
 import { SwitchDefaultExample } from './examples/switch-examples';
 import { AccordionDefaultExample } from './examples/accordion-examples';
-import { CalloutExample } from './examples/callout-example';
+import { CalloutExample } from './examples/callout-examples';
 
 export type ComponentListItemType = {
   name: string;

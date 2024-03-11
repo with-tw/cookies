@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import { AuthenticationFormExample } from './examples/authentication-form-example';
+import { AuthenticationFormExample } from './examples/authentication-form-examples';
+import { HeroSectionExample } from './examples/hero-section-examples';
 
 export type CookiesListItemType = {
   name: string;
@@ -17,6 +18,16 @@ export const CookiesList: CookiesListItemType[] = [
     render: (
       <div className="scale-[40%]">
         <AuthenticationFormExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Hero Section',
+    description: 'A hero section component with consistent styling.',
+    path: '/cookies/hero-section',
+    render: (
+      <div className="scale-[60%]">
+        <HeroSectionExample />
       </div>
     ),
   },

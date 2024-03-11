@@ -11,7 +11,7 @@
     "prettier:fix": "prettier --write --ignore-path .gitignore .",
     "package:generate:setup-code": "ts-node generators/update-setup-code.ts",
     "package:generate:cookies-code": "ts-node generators/update-cookie-code.ts",
-    "package:generate": "yarn package:generate:setup-code"
+    "package:generate": "yarn package:generate:setup-code && yarn package:generate:cookies-code"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
