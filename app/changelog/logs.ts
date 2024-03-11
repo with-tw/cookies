@@ -33,4 +33,16 @@ export const ChangelogContent: ChangelogContentType[] = [
       '💄 Create switch components for collection',
     ],
   },
+  {
+    version: '0.4',
+    features: [
+      '🍪 Add accordion to components collection',
+      'Adding Posthog events',
+      'Update authentication-form cookie docs',
+      '🍪 Callout component to cookies',
+      '✨ Redesign cookie card',
+      '✨ Fix switch loader',
+      '🍪 Add hero-section to cookies',
+    ],
+  },
 ];
