@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { AuthenticationFormExample } from './examples/authentication-form-examples';
 import { HeroSectionExample } from './examples/hero-section-examples';
+import { EmptyStateExample } from './examples/empty-state-examples';
 
 export type CookiesListItemType = {
   name: string;
@@ -28,6 +29,16 @@ export const CookiesList: CookiesListItemType[] = [
     render: (
       <div className="scale-[60%]">
         <HeroSectionExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Empty State',
+    description: 'An empty state component for showing empty sections.',
+    path: '/cookies/empty-state',
+    render: (
+      <div className="scale-[50%]">
+        <EmptyStateExample />
       </div>
     ),
   },

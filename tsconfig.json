@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "generators/update-setup-code.ts"
+    "generators/update-setup-code.ts",
+    "app/cookies/(cookies-docs)/empty-state/page.mdx"
   ],
   "exclude": ["node_modules"]
 }
