@@ -1,4 +1,4 @@
-import { AuthenticationFormExample } from '@/app/cookies/common/examples/authentication-form-examples.tsx';
+import { HeroSectionExample } from '@/app/cookies/common/examples/hero-section-examples.tsx';
 import CookiesDocsHeader from '@/components/website/cookies-docs-header';
 import { COOKIES_SETUP_CODE } from '@/package/registry/cookies-setup-code.tsx';
 import { CodeBlock } from '@/components/website/code-block.tsx';
@@ -8,7 +8,7 @@ import { ComponentManualSetup } from '@/components/sections/component-manual-set
 <CookiesDocsHeader />
 
 <CookiePreview>
-  <AuthenticationFormExample />
+  <HeroSectionExample />
 </CookiePreview>
 
 <div className="py-12" />
@@ -17,7 +17,7 @@ import { ComponentManualSetup } from '@/components/sections/component-manual-set
   <CodeBlock
     className="w-full"
     hasViewMore
-    fileName={COOKIES_SETUP_CODE['authentication-form'].registerAt}>
-    {COOKIES_SETUP_CODE['authentication-form'].code}
+    fileName={COOKIES_SETUP_CODE['hero-section'].registerAt}>
+    {COOKIES_SETUP_CODE['hero-section'].code}
   </CodeBlock>
 </ComponentManualSetup>
