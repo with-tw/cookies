@@ -6,6 +6,7 @@ import { CardExample } from './examples/card-examples';
 import { SwitchDefaultExample } from './examples/switch-examples';
 import { AccordionDefaultExample } from './examples/accordion-examples';
 import { CalloutExample } from './examples/callout-examples';
+import { TimelineExample } from './examples/timeline-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -62,5 +63,16 @@ export const ComponentsList: ComponentListItemType[] = [
       'Callout component with multiple variants covering various use cases.',
     path: '/components/callout',
     render: <CalloutExample />,
+  },
+  {
+    name: 'Timeline',
+    description:
+      'A thoughtful timeline component for your web-apps & landing pages',
+    path: '/components/timeline',
+    render: (
+      <div className="scale-[30%]">
+        <TimelineExample />
+      </div>
+    ),
   },
 ];
