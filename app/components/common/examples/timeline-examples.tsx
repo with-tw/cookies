@@ -8,6 +8,7 @@ import {
   TimelineItemPrimaryAction,
   TimelineItemSecondaryAction,
 } from '@/components/ui/timeline';
+import { Rocket } from 'lucide-react';
 
 export const TimelineExample = () => (
   <Timeline>
@@ -42,6 +43,20 @@ export const TimelineExample = () => (
           Rollback to main branch
         </TimelineItemPrimaryAction>
       </TimelineItemActionContainer>
+    </TimelineItem>
+  </Timeline>
+);
+
+export const TimelineWithCustomIconExample = () => (
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon>
+        <Rocket />
+      </TimelineItemIcon>
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
     </TimelineItem>
   </Timeline>
 );
