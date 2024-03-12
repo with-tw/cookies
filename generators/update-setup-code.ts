@@ -14,6 +14,7 @@ type CodeRegisteryType =
   | 'switch'
   | 'accordion'
   | 'callout'
+  | 'timeline'
   | 'responsive-control';
 
 const OUTPUT_PATH = path.join(__dirname, '../package/registry/setup-code.tsx');
@@ -57,6 +58,10 @@ const FILES_TO_REGISTER: Record<
     registerAt: 'components/ui/callout.tsx',
     path: path.join(__dirname, '../components/ui/callout.tsx'),
   },
+  timeline: {
+    registerAt: 'components/ui/timeline.tsx',
+    path: path.join(__dirname, '../components/ui/timeline.tsx'),
+  },
   'responsive-control': {
     registerAt: 'components/layouts/responsive-control.tsx',
     path: path.join(__dirname, '../components/layouts/responsive-control.tsx'),
@@ -87,6 +92,7 @@ export type CodeRegisteryType =
   | 'switch'
   | 'accordion'
   | 'callout'
+  | 'timeline'
   | 'responsive-control';
   
 export const SETUP_CODE: Record<CodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(setupCode, null, 2)};

@@ -1,0 +1,233 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { CookiePreview } from '@/components/website/cookie-preview.tsx';
+import {
+  Timeline,
+  TimelineItem,
+  TimelineItemIcon,
+  TimelineItemHeadline,
+  TimelineItemDescription,
+  TimelineItemActionContainer,
+  TimelineItemPrimaryAction,
+  TimelineItemSecondaryAction,
+} from '@/components/ui/timeline.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+import { TimelineWithCustomIconExample } from '@/app/components/common/examples/timeline-examples.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['timeline'].registerAt}>
+    {SETUP_CODE['timeline'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem>
+    <TimelineItemIcon />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline Item'}>
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+    </TimelineItem>
+  </Timeline>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem>
+    <TimelineItemIcon variant="info" />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline Item with icon="info"'}>
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon variant="info" />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+    </TimelineItem>
+  </Timeline>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem>
+    <TimelineItemIcon variant="error" />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline Item with icon="error"'}>
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon variant="error" />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+    </TimelineItem>
+  </Timeline>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem>
+    <TimelineItemIcon variant="success" />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline Item with icon="success"'}>
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon variant="success" />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+    </TimelineItem>
+  </Timeline>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem>
+    <TimelineItemIcon variant="warning" />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline Item with icon="warning"'}>
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon variant="warning" />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+    </TimelineItem>
+  </Timeline>
+</ComponentPreview>
+
+<div className="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem className="min-w-fit">
+    <TimelineItemIcon>
+      <Rocket />
+    </TimelineItemIcon>
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline Item with custom icon'}>
+  <TimelineWithCustomIconExample />
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem className="min-w-fit">
+    <TimelineItemIcon />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+  <TimelineItem className="min-w-fit">
+    <TimelineItemIcon />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline with multiple timeline item'}>
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+    </TimelineItem>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+    </TimelineItem>
+  </Timeline>
+</ComponentPreview>
+
+<div className="py-12" />
+
+<ComponentPreview
+  code={`<Timeline>
+  <TimelineItem className="min-w-fit">
+    <TimelineItemIcon />
+    <TimelineItemHeadline>Headline</TimelineItemHeadline>
+    <TimelineItemDescription>
+      This is a description text.
+    </TimelineItemDescription>
+    <TimelineItemActionContainer>
+      <TimelineItemPrimaryAction>Get Started</TimelineItemPrimaryAction>
+      <TimelineItemSecondaryAction>Learn more</TimelineItemSecondaryAction>
+    </TimelineItemActionContainer>
+  </TimelineItem>
+</Timeline>`}
+  headline={'Timeline Item with actions'}>
+  <Timeline>
+    <TimelineItem className="min-w-fit">
+      <TimelineItemIcon />
+      <TimelineItemHeadline>Headline</TimelineItemHeadline>
+      <TimelineItemDescription>
+        This is a description text.
+      </TimelineItemDescription>
+      <TimelineItemActionContainer>
+        <TimelineItemPrimaryAction>Get Started</TimelineItemPrimaryAction>
+        <TimelineItemSecondaryAction>Learn more</TimelineItemSecondaryAction>
+      </TimelineItemActionContainer>
+    </TimelineItem>
+  </Timeline>
+</ComponentPreview>
