@@ -16,20 +16,21 @@ body {
   @apply overflow-x-hidden;
 }
 
-body::-webkit-scrollbar {
-  width: 0px;
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar-track {
+  width: 0;
+  background: transparent;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: transparent;
+::-webkit-scrollbar-thumb {
+  width: 0;
+  background: transparent;
 }
 
-body {
-  overflow: scroll; /* or auto */
-}
-
-/* Optionally, you can add styles for Firefox and other browsers */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
