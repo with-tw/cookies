@@ -7,6 +7,7 @@ import { SwitchDefaultExample } from './examples/switch-examples';
 import { AccordionDefaultExample } from './examples/accordion-examples';
 import { CalloutExample } from './examples/callout-examples';
 import { TimelineExample } from './examples/timeline-examples';
+import { TabMenuExample } from './examples/tab-menu-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -63,6 +64,16 @@ export const ComponentsList: ComponentListItemType[] = [
       'Callout component with multiple variants covering various use cases.',
     path: '/components/callout',
     render: <CalloutExample />,
+  },
+  {
+    name: 'Tab Menu',
+    description: 'A auto-adjustable tab menu component',
+    path: '/components/tab-menu',
+    render: (
+      <div className="scale-[40%]">
+        <TabMenuExample />
+      </div>
+    ),
   },
   {
     name: 'Timeline',

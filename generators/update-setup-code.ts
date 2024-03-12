@@ -15,6 +15,7 @@ type CodeRegisteryType =
   | 'accordion'
   | 'callout'
   | 'timeline'
+  | 'tab-menu'
   | 'responsive-control';
 
 const OUTPUT_PATH = path.join(__dirname, '../package/registry/setup-code.tsx');
@@ -62,6 +63,10 @@ const FILES_TO_REGISTER: Record<
     registerAt: 'components/ui/timeline.tsx',
     path: path.join(__dirname, '../components/ui/timeline.tsx'),
   },
+  'tab-menu': {
+    registerAt: 'components/ui/tab-menu.tsx',
+    path: path.join(__dirname, '../components/ui/tab-menu.tsx'),
+  },
   'responsive-control': {
     registerAt: 'components/layouts/responsive-control.tsx',
     path: path.join(__dirname, '../components/layouts/responsive-control.tsx'),
@@ -93,6 +98,7 @@ export type CodeRegisteryType =
   | 'accordion'
   | 'callout'
   | 'timeline'
+  | 'tab-menu'
   | 'responsive-control';
   
 export const SETUP_CODE: Record<CodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(setupCode, null, 2)};

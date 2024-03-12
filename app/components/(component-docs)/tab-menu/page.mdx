@@ -1,0 +1,56 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { TabMenu, TabMenuOption } from '@/components/ui/tab-menu.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['tab-menu'].registerAt}>
+    {SETUP_CODE['tab-menu'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<TabMenu>
+  <TabMenuOption>Home</TabMenuOption>
+  <TabMenuOption>Explore</TabMenuOption>
+  <TabMenuOption>Profile</TabMenuOption>
+  <TabMenuOption>Settings</TabMenuOption>
+  <TabMenuOption>Changelog</TabMenuOption>
+</TabMenu>`}
+  headline="Tab Menu Example"
+  description="This is a simple example of a tab menu">
+  <TabMenu>
+    <TabMenuOption>Home</TabMenuOption>
+    <TabMenuOption>Explore</TabMenuOption>
+    <TabMenuOption>Profile</TabMenuOption>
+    <TabMenuOption>Settings</TabMenuOption>
+    <TabMenuOption>Changelog</TabMenuOption>
+  </TabMenu>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<TabMenu>
+  <TabMenuOption>Home</TabMenuOption>
+  <TabMenuOption>Explore</TabMenuOption>
+  <TabMenuOption>Profile</TabMenuOption>
+  <TabMenuOption isLocked>Settings</TabMenuOption>
+  <TabMenuOption isLocked>Changelog</TabMenuOption>
+</TabMenu>`}
+  headline="Locked Tab Menu Options"
+  description="Tab menu with locked options">
+  <TabMenu>
+    <TabMenuOption>Home</TabMenuOption>
+    <TabMenuOption>Explore</TabMenuOption>
+    <TabMenuOption>Profile</TabMenuOption>
+    <TabMenuOption isLocked>Settings</TabMenuOption>
+    <TabMenuOption isLocked>Changelog</TabMenuOption>
+  </TabMenu>
+</ComponentPreview>
