@@ -5,9 +5,9 @@ import { Button, ButtonProps } from './button';
 import { cn } from '@/helpers/utils';
 import { AlertTriangle, CheckCircle, Info } from 'lucide-react';
 
-export interface TimelineProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface TimelineProps extends React.HTMLAttributes<HTMLDivElement> { }
 export interface TimelineItemProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
+  extends React.HTMLAttributes<HTMLDivElement> { }
 export type TimelineItemIconVariants =
   | 'none'
   | 'info'
@@ -20,13 +20,13 @@ export interface TimelineItemIconProps
   iconBG?: ClassValue;
 }
 export interface TimelineItemHeadlineProps
-  extends React.HTMLAttributes<HTMLHeadingElement> {}
+  extends React.HTMLAttributes<HTMLHeadingElement> { }
 export interface TimelineItemDescriptionProps
-  extends React.HTMLAttributes<HTMLParagraphElement> {}
+  extends React.HTMLAttributes<HTMLParagraphElement> { }
 export interface TimelineItemActionContainerProps
-  extends React.HTMLAttributes<HTMLDivElement> {}
-export interface TimelineItemPrimaryActionProps extends ButtonProps {}
-export interface TimelineItemSecondaryActionProps extends ButtonProps {}
+  extends React.HTMLAttributes<HTMLDivElement> { }
+export interface TimelineItemPrimaryActionProps extends ButtonProps { }
+export interface TimelineItemSecondaryActionProps extends ButtonProps { }
 
 export const Timeline = forwardRef<HTMLDivElement, TimelineProps>(
   ({ className, ...args }, ref) => {
@@ -187,7 +187,7 @@ export const TimelineItemSecondaryAction = forwardRef<
     <Button
       ref={ref}
       variant="secondary"
-      className={cn('timeline-item-secondary-props', className)}
+      className={cn('timeline-item-secondary-action', className)}
       {...args}
     />
   );
