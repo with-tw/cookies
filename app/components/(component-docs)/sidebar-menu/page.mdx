@@ -1,0 +1,216 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import {
+  SidebarMenu,
+  SidebarMenuContainer,
+  SidebarMenuContent,
+  SidebarMenuItem,
+  SidebarSubMenu,
+  SidebarSubMenuContent,
+  SidebarSubMenuItem,
+} from '@/components/ui/sidebar-menu';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+import { SidebarMenuExample } from '@/app/components/common/examples/sidebar-menu-examples.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['sidebar-menu'].registerAt}>
+    {SETUP_CODE['sidebar-menu'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<SidebarMenuContainer className="w-[320px]">
+  <SidebarMenu trigger="Account Settings">
+    <SidebarMenuContent>
+      <SidebarMenuItem>Change username</SidebarMenuItem>
+      <SidebarMenuItem>Manage subscriptions</SidebarMenuItem>
+      <SidebarMenuItem>Manage profile visibility</SidebarMenuItem>
+      <SidebarSubMenu trigger="Posts and Initiatives">
+        <SidebarSubMenuContent>
+          <SidebarSubMenuItem>Hide posts from members</SidebarSubMenuItem>
+          <SidebarSubMenuItem>
+            Hide initiatives from members
+          </SidebarSubMenuItem>
+        </SidebarSubMenuContent>
+      </SidebarSubMenu>
+    </SidebarMenuContent>
+  </SidebarMenu>
+  <SidebarMenu trigger="Community Settings">
+    <SidebarMenuContent>
+      <SidebarMenuItem>Change commnuity logo</SidebarMenuItem>
+      <SidebarMenuItem>Create new community</SidebarMenuItem>
+    </SidebarMenuContent>
+  </SidebarMenu>
+</SidebarMenuContainer>`}
+  headline="Sidebar Menu Example"
+  description="Example usage of the sidebar menu component">
+  <SidebarMenuContainer className="w-[320px]">
+    <SidebarMenu trigger="Account Settings">
+      <SidebarMenuContent>
+        <SidebarMenuItem>Change username</SidebarMenuItem>
+        <SidebarMenuItem>Manage subscriptions</SidebarMenuItem>
+        <SidebarMenuItem>Manage profile visibility</SidebarMenuItem>
+        <SidebarSubMenu trigger="Posts and Initiatives">
+          <SidebarSubMenuContent>
+            <SidebarSubMenuItem>Hide posts from members</SidebarSubMenuItem>
+            <SidebarSubMenuItem>
+              Hide initiatives from members
+            </SidebarSubMenuItem>
+          </SidebarSubMenuContent>
+        </SidebarSubMenu>
+      </SidebarMenuContent>
+    </SidebarMenu>
+    <SidebarMenu trigger="Community Settings">
+      <SidebarMenuContent>
+        <SidebarMenuItem>Change commnuity logo</SidebarMenuItem>
+        <SidebarMenuItem>Create new community</SidebarMenuItem>
+      </SidebarMenuContent>
+    </SidebarMenu>
+  </SidebarMenuContainer>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<SidebarMenuContainer className="w-[320px]">
+  <SidebarMenu trigger="Account Settings">
+    <SidebarMenuContent>
+      <SidebarMenuItem>Change username</SidebarMenuItem>
+      <SidebarMenuItem>Manage subscriptions</SidebarMenuItem>
+      <SidebarMenuItem>Manage profile visibility</SidebarMenuItem>
+    </SidebarMenuContent>
+  </SidebarMenu>
+</SidebarMenuContainer>`}
+  headline="Sidebar Menu"
+  description="Default, single sidebar menu">
+  <SidebarMenuContainer className="w-[320px]">
+    <SidebarMenu trigger="Account Settings">
+      <SidebarMenuContent>
+        <SidebarMenuItem>Change username</SidebarMenuItem>
+        <SidebarMenuItem>Manage subscriptions</SidebarMenuItem>
+        <SidebarMenuItem>Manage profile visibility</SidebarMenuItem>
+      </SidebarMenuContent>
+    </SidebarMenu>
+  </SidebarMenuContainer>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<SidebarMenuContainer className="w-[320px]">
+  <SidebarMenu trigger="Account Settings">
+    <SidebarMenuContent>
+      <SidebarMenuItem>Change username</SidebarMenuItem>
+      <SidebarMenuItem>Manage subscriptions</SidebarMenuItem>
+      <SidebarMenuItem>Manage profile visibility</SidebarMenuItem>
+      <SidebarSubMenu trigger="Posts and Initiatives">
+        <SidebarSubMenuContent>
+          <SidebarSubMenuItem>Hide posts from members</SidebarSubMenuItem>
+          <SidebarSubMenuItem>
+            Hide initiatives from members
+          </SidebarSubMenuItem>
+        </SidebarSubMenuContent>
+      </SidebarSubMenu>
+    </SidebarMenuContent>
+  </SidebarMenu>
+</SidebarMenuContainer>`}
+  headline="Sidebar Menu with Sub Menu"
+  description="A sidebar menu dropdown containing a sub menu">
+  <SidebarMenuContainer className="w-[320px]">
+    <SidebarMenu trigger="Account Settings">
+      <SidebarMenuContent>
+        <SidebarMenuItem>Change username</SidebarMenuItem>
+        <SidebarMenuItem>Manage subscriptions</SidebarMenuItem>
+        <SidebarMenuItem>Manage profile visibility</SidebarMenuItem>
+        <SidebarSubMenu trigger="Posts and Initiatives">
+          <SidebarSubMenuContent>
+            <SidebarSubMenuItem>Hide posts from members</SidebarSubMenuItem>
+            <SidebarSubMenuItem>
+              Hide initiatives from members
+            </SidebarSubMenuItem>
+          </SidebarSubMenuContent>
+        </SidebarSubMenu>
+      </SidebarMenuContent>
+    </SidebarMenu>
+  </SidebarMenuContainer>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<SidebarMenuContainer className="w-[320px]">
+  <SidebarMenu trigger="Account Settings">
+    <SidebarMenuContent>
+      <SidebarMenuItem animationType="from-left">
+        Change username
+      </SidebarMenuItem>
+      <SidebarMenuItem animationType="from-left">
+        Manage subscriptions
+      </SidebarMenuItem>
+      <SidebarMenuItem animationType="from-left">
+        Manage profile visibility
+      </SidebarMenuItem>
+    </SidebarMenuContent>
+  </SidebarMenu>
+</SidebarMenuContainer>`}
+  headline="Sidebar Menu with Animation"
+  description="Sidebar menu with animation on load">
+  <SidebarMenuContainer className="w-[320px]">
+    <SidebarMenu trigger="Account Settings">
+      <SidebarMenuContent>
+        <SidebarMenuItem animationType="from-left">
+          Change username
+        </SidebarMenuItem>
+        <SidebarMenuItem animationType="from-left">
+          Manage subscriptions
+        </SidebarMenuItem>
+        <SidebarMenuItem animationType="from-left">
+          Manage profile visibility
+        </SidebarMenuItem>
+      </SidebarMenuContent>
+    </SidebarMenu>
+  </SidebarMenuContainer>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<SidebarMenuContainer className="w-[320px]">
+  <SidebarMenu
+    trigger="Account Settings"
+    icon={<CircleUserRound className="w-4 h-4" />}>
+    <SidebarMenuContent>
+      <SidebarMenuItem>Change username</SidebarMenuItem>
+      <SidebarMenuItem>Manage subscriptions</SidebarMenuItem>
+      <SidebarMenuItem>Manage profile visibility</SidebarMenuItem>
+      <SidebarSubMenu
+        trigger="Posts and Initiatives"
+        icon={<MessageCircleDashed className="w-4 h-4" />}>
+        <SidebarSubMenuContent>
+          <SidebarSubMenuItem>Hide posts from members</SidebarSubMenuItem>
+          <SidebarSubMenuItem>
+            Hide initiatives from members
+          </SidebarSubMenuItem>
+        </SidebarSubMenuContent>
+      </SidebarSubMenu>
+    </SidebarMenuContent>
+  </SidebarMenu>
+  <SidebarMenu
+    trigger="Community Settings"
+    icon={<Settings className="w-4 h-4" />}>
+    <SidebarMenuContent>
+      <SidebarMenuItem>Change commnuity logo</SidebarMenuItem>
+      <SidebarMenuItem>Create new community</SidebarMenuItem>
+    </SidebarMenuContent>
+  </SidebarMenu>
+</SidebarMenuContainer>`}
+  headline="Sidebar Menu with icon"
+  description="Sidebar menu with icons using icon slots">
+  <SidebarMenuExample />
+</ComponentPreview>

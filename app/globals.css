@@ -5,6 +5,7 @@
 html,
 body {
   @apply tracking-tight text-neutral-200;
+  @apply overflow-x-hidden overflow-y-scroll;
 }
 
 html {
@@ -13,7 +14,6 @@ html {
 
 body {
   @apply h-screen bg-gradient-to-b from-neutral-950 to-neutral-900;
-  @apply overflow-x-hidden;
 }
 
 html {
