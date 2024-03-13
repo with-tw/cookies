@@ -8,6 +8,7 @@ import { AccordionDefaultExample } from './examples/accordion-examples';
 import { CalloutExample } from './examples/callout-examples';
 import { TimelineExample } from './examples/timeline-examples';
 import { TabMenuExample } from './examples/tab-menu-examples';
+import { SidebarMenuExample } from './examples/sidebar-menu-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -83,6 +84,17 @@ export const ComponentsList: ComponentListItemType[] = [
     render: (
       <div className="scale-[30%]">
         <TimelineExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Sidebar Menu',
+    description:
+      'An auto-adjustable sidebar menu component for side navigations.',
+    path: '/components/sidebar-menu',
+    render: (
+      <div className="scale-[40%]">
+        <SidebarMenuExample />
       </div>
     ),
   },
