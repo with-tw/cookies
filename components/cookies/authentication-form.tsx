@@ -42,12 +42,14 @@ export default function AuthenticationForm() {
               withLabel="Email Address"
               labelDirection="v"
               placeholder="ironman@avengers.com"
+              animationType="from-bottom"
               stretch
             />
             <Input
               withLabel="Password"
               labelDirection="v"
               placeholder="**********"
+              animationType="from-bottom"
               stretch
             />
           </>
@@ -58,18 +60,21 @@ export default function AuthenticationForm() {
               withLabel="Create username"
               labelDirection="v"
               placeholder="@ironman"
+              animationType="from-bottom"
               stretch
             />
             <Input
               withLabel="Your Email Address"
               labelDirection="v"
               placeholder="ironman@avengers.com"
+              animationType="from-bottom"
               stretch
             />
             <Input
               withLabel="Create a Password"
               labelDirection="v"
               placeholder="**********"
+              animationType="from-bottom"
               stretch
             />
           </>
