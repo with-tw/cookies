@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { AuthenticationFormExample } from './examples/authentication-form-examples';
 import { HeroSectionExample } from './examples/hero-section-examples';
 import { EmptyStateExample } from './examples/empty-state-examples';
+import { ImageCardExample } from './examples/image-card-examples';
 
 export type CookiesListItemType = {
   name: string;
@@ -39,6 +40,17 @@ export const CookiesList: CookiesListItemType[] = [
     render: (
       <div className="scale-[50%]">
         <EmptyStateExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Image Card',
+    description:
+      'A simple image card component with cover, headling and description text',
+    path: '/cookies/image-card',
+    render: (
+      <div className="scale-[50%]">
+        <ImageCardExample />
       </div>
     ),
   },
