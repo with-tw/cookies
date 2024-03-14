@@ -4,7 +4,8 @@ const cookiesPath = require('path');
 type CookiesCodeRegisteryType =
   | 'authentication-form'
   | 'hero-section'
-  | 'empty-state';
+  | 'empty-state'
+  | 'image-card';
 
 const COOKIES_OUTPUT_PATH = cookiesPath.join(
   __dirname,
@@ -29,6 +30,10 @@ const COOKIES_FILES_TO_REGISTER: Record<
     registerAt: 'components/cookies/empty-state.tsx',
     path: cookiesPath.join(__dirname, '../components/cookies/empty-state.tsx'),
   },
+  'image-card': {
+    registerAt: 'components/cookies/image-card.tsx',
+    path: cookiesPath.join(__dirname, '../components/cookies/image-card.tsx'),
+  },
 };
 
 const cookiesSetupCode = Object.keys(COOKIES_FILES_TO_REGISTER).reduce(
@@ -45,7 +50,11 @@ const cookiesSetupCode = Object.keys(COOKIES_FILES_TO_REGISTER).reduce(
 const tsxContentForCookies = `\
 // This file is auto-generated. Do not modify manually.
 
-type CookiesCodeRegisteryType = 'authentication-form' | 'hero-section' | 'empty-state';
+type CookiesCodeRegisteryType =
+  | 'authentication-form'
+  | 'hero-section'
+  | 'empty-state'
+  | 'image-card';
   
 export const COOKIES_SETUP_CODE: Record<CookiesCodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(cookiesSetupCode, null, 2)};
 `;
