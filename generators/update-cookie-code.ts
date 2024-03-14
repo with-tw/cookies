@@ -5,7 +5,8 @@ type CookiesCodeRegisteryType =
   | 'authentication-form'
   | 'hero-section'
   | 'empty-state'
-  | 'image-card';
+  | 'image-card'
+  | 'toggle-list';
 
 const COOKIES_OUTPUT_PATH = cookiesPath.join(
   __dirname,
@@ -34,6 +35,10 @@ const COOKIES_FILES_TO_REGISTER: Record<
     registerAt: 'components/cookies/image-card.tsx',
     path: cookiesPath.join(__dirname, '../components/cookies/image-card.tsx'),
   },
+  'toggle-list': {
+    registerAt: 'components/cookies/toggle-list.tsx',
+    path: cookiesPath.join(__dirname, '../components/cookies/toggle-list.tsx'),
+  },
 };
 
 const cookiesSetupCode = Object.keys(COOKIES_FILES_TO_REGISTER).reduce(
@@ -54,7 +59,8 @@ type CookiesCodeRegisteryType =
   | 'authentication-form'
   | 'hero-section'
   | 'empty-state'
-  | 'image-card';
+  | 'image-card'
+  | 'toggle-list';
   
 export const COOKIES_SETUP_CODE: Record<CookiesCodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(cookiesSetupCode, null, 2)};
 `;

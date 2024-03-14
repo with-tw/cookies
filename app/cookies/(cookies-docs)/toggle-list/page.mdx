@@ -1,0 +1,23 @@
+import { ToggleListExample } from '@/app/cookies/common/examples/toggle-list-examples.tsx';
+import CookiesDocsHeader from '@/components/website/cookies-docs-header';
+import { COOKIES_SETUP_CODE } from '@/package/registry/cookies-setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { CookiePreview } from '@/components/website/cookie-preview.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<CookiesDocsHeader />
+
+<CookiePreview>
+  <ToggleListExample />
+</CookiePreview>
+
+<div className="py-12" />
+
+<ComponentManualSetup>
+  <CodeBlock
+    className="w-full"
+    hasViewMore
+    fileName={COOKIES_SETUP_CODE['toggle-list'].registerAt}>
+    {COOKIES_SETUP_CODE['toggle-list'].code}
+  </CodeBlock>
+</ComponentManualSetup>
