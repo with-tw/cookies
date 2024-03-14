@@ -45,4 +45,14 @@ export const ChangelogContent: ChangelogContentType[] = [
       '🍪 Add hero-section to cookies',
     ],
   },
+  {
+    version: '0.5',
+    features: [
+      '🍪 Add empty-state to cookies <> Docs support',
+      '🍪 Add timeline component to collection',
+      '🍪 Add tab-menu to component collection',
+      '🍪 Add sidebar menu to component collection',
+      '🍪 Add image-card to cookies collection',
+    ],
+  },
 ];
