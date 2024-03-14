@@ -3,6 +3,7 @@ import { AuthenticationFormExample } from './examples/authentication-form-exampl
 import { HeroSectionExample } from './examples/hero-section-examples';
 import { EmptyStateExample } from './examples/empty-state-examples';
 import { ImageCardExample } from './examples/image-card-examples';
+import { ToggleListExample } from './examples/toggle-list-examples';
 
 export type CookiesListItemType = {
   name: string;
@@ -51,6 +52,16 @@ export const CookiesList: CookiesListItemType[] = [
     render: (
       <div className="scale-[50%]">
         <ImageCardExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Toggle List',
+    description: 'A toggle list component for managing multiple toggle options',
+    path: '/cookies/toggle-list',
+    render: (
+      <div className="scale-[50%]">
+        <ToggleListExample />
       </div>
     ),
   },
