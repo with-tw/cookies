@@ -9,6 +9,7 @@ import { CalloutExample } from './examples/callout-examples';
 import { TimelineExample } from './examples/timeline-examples';
 import { TabMenuExample } from './examples/tab-menu-examples';
 import { SidebarMenuExample } from './examples/sidebar-menu-examples';
+import { PillarExample } from './examples/pillar-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -95,6 +96,17 @@ export const ComponentsList: ComponentListItemType[] = [
     render: (
       <div className="scale-[40%]">
         <SidebarMenuExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Pillar',
+    description:
+      'Pillar component can be used for listing features, options for landing pages/websites.',
+    path: '/components/pillar',
+    render: (
+      <div className="scale-[50%]">
+        <PillarExample />
       </div>
     ),
   },
