@@ -1,0 +1,38 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import {
+  Pillar,
+  PillarIcon,
+  PillarHeadline,
+  PillarDescription,
+} from '@/components/ui/pillar.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+import { PillarExample } from '@/app/components/common/examples/pillar-examples.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['pillar'].registerAt}>
+    {SETUP_CODE['pillar'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Pillar>
+  <PillarIcon>
+    <Paintbrush />
+  </PillarIcon>
+  <PillarHeadline>
+    Design & Accessibility
+  </PillarHeadline>
+  <PillarDescription>
+    Cookies has a collection of components with fresh design and accessibility.
+  </PillarDescription>
+</Pillar>`}
+  headline="Pillar Example Use-case">
+  <PillarExample />
+</ComponentPreview>
