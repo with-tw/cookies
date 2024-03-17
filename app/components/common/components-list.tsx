@@ -10,6 +10,7 @@ import { TimelineExample } from './examples/timeline-examples';
 import { TabMenuExample } from './examples/tab-menu-examples';
 import { SidebarMenuExample } from './examples/sidebar-menu-examples';
 import { PillarExample } from './examples/pillar-examples';
+import Image from 'next/image';
 
 export type ComponentListItemType = {
   name: string;
@@ -19,6 +20,23 @@ export type ComponentListItemType = {
 };
 
 export const ComponentsList: ComponentListItemType[] = [
+  {
+    name: 'Responsive Control',
+    description:
+      'A layout component to centre screen content for multiple devices, based on tailwind classes.',
+    path: '/components/responsive-control',
+    render: (
+      <div className="responsive-control-banner-wrapper">
+        <Image
+          src="/media/images/responsive-control-banner.png"
+          alt="responsive-control-banner"
+          width={560}
+          height={300}
+          className="rounded-xl"
+        />
+      </div>
+    ),
+  },
   {
     name: 'Button',
     description:

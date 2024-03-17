@@ -1,0 +1,13 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['responsive-control'].registerAt}>
+    {SETUP_CODE['responsive-control'].code}
+  </CodeBlock>
+</ComponentManualSetup>
