@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { forwardRef, useState } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
@@ -12,9 +12,10 @@ export const NavbarLogo = forwardRef<HTMLImageElement, NavbarLogoProps>(
   ({ className, responsive = false, ...args }, ref) => {
     const [hovering, setHovering] = useState<boolean>(false);
     const pathname = usePathname();
+    useEffect(() => setHovering(false), [pathname]);
     return (
       <div
-        className="w-fit h-fit flex flex-row items-center gap-2 hover:brightness-50"
+        className="w-fit h-fit flex flex-row items-center gap-2"
         onMouseEnter={() => {
           if (pathname !== '/') {
             setHovering(true);
