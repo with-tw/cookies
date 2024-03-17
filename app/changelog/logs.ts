@@ -55,4 +55,12 @@ export const ChangelogContent: ChangelogContentType[] = [
       '🍪 Add image-card to cookies collection',
     ],
   },
+  {
+    version: '1.0',
+    features: [
+      '🍪 Add toggle-list to cookies collection',
+      '🍪 Add pillar to component collection',
+      '🍪 Add responsive control to component collection',
+    ],
+  },
 ];
