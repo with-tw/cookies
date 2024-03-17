@@ -46,7 +46,7 @@ export const ComponentBlock = forwardRef<HTMLDivElement, ComponentBlockProps>(
         }}
         onClick={() => posthog.capture(componentName)}>
         <Link href={componentPath}>
-          <div className="h-[180px] w-full rounded-xl flex flex-row items-center justify-center bg-white/10">
+          <div className="h-[180px] w-full rounded-xl flex flex-row items-center justify-center bg-neutral-900 shadow-inner border-neutral-800 select-none">
             {componentRender}
           </div>
           <div className={cn('component-details-wrapper mt-4')}>
