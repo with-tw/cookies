@@ -18,6 +18,7 @@ type CodeRegisteryType =
   | 'tab-menu'
   | 'sidebar-menu'
   | 'pillar'
+  | 'stepper'
   | 'responsive-control';
 
 const OUTPUT_PATH = path.join(__dirname, '../package/registry/setup-code.tsx');
@@ -77,6 +78,10 @@ const FILES_TO_REGISTER: Record<
     registerAt: 'components/ui/pillar.tsx',
     path: path.join(__dirname, '../components/ui/pillar.tsx'),
   },
+  stepper: {
+    registerAt: 'components/ui/stepper.tsx',
+    path: path.join(__dirname, '../components/ui/stepper.tsx'),
+  },
   'responsive-control': {
     registerAt: 'components/layouts/responsive-control.tsx',
     path: path.join(__dirname, '../components/layouts/responsive-control.tsx'),
@@ -111,6 +116,7 @@ export type CodeRegisteryType =
   | 'tab-menu'
   | 'sidebar-menu'
   | 'pillar'
+  | 'stepper'
   | 'responsive-control';
   
 export const SETUP_CODE: Record<CodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(setupCode, null, 2)};

@@ -11,6 +11,7 @@ import { TabMenuExample } from './examples/tab-menu-examples';
 import { SidebarMenuExample } from './examples/sidebar-menu-examples';
 import { PillarExample } from './examples/pillar-examples';
 import Image from 'next/image';
+import { StepperExample } from './examples/stepper-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -125,6 +126,17 @@ export const ComponentsList: ComponentListItemType[] = [
     render: (
       <div className="scale-[50%]">
         <PillarExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Stepper',
+    description:
+      'A stepper component with features to show status and active tab',
+    path: '/components/stepper',
+    render: (
+      <div className="scale-[60%]">
+        <StepperExample />
       </div>
     ),
   },
