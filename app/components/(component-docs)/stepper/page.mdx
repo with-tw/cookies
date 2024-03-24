@@ -1,0 +1,178 @@
+import ComponentDocsHeader from '@/components/website/component-docs-header';
+import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
+import { CodeBlock } from '@/components/website/code-block.tsx';
+import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import {
+  Stepper,
+  StepperItem,
+  StepperStatusIcon,
+  StepperTitle,
+} from '@/components/ui/stepper.tsx';
+import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
+
+<ComponentDocsHeader />
+
+<ComponentManualSetup>
+  <CodeBlock hasViewMore fileName={SETUP_CODE['stepper'].registerAt}>
+    {SETUP_CODE['stepper'].code}
+  </CodeBlock>
+</ComponentManualSetup>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Stepper activeStep={1}>
+  <StepperItem>
+    <StepperStatusIcon status="success" />
+    <StepperTitle>Create Project</StepperTitle>
+  </StepperItem>
+  <StepperItem>
+    <StepperStatusIcon status="loading" />
+    <StepperTitle>Select Tooling</StepperTitle>
+  </StepperItem>
+  <StepperItem>
+    <StepperStatusIcon status="inactive" />
+    <StepperTitle>Connect Account</StepperTitle>
+  </StepperItem>
+</Stepper>`}
+  headline="Stepper Flow">
+  <Stepper activeStep={1}>
+    <StepperItem>
+      <StepperStatusIcon status="success" />
+      <StepperTitle>Create Project</StepperTitle>
+    </StepperItem>
+    <StepperItem>
+      <StepperStatusIcon status="loading" />
+      <StepperTitle>Select Tooling</StepperTitle>
+    </StepperItem>
+    <StepperItem>
+      <StepperStatusIcon status="inactive" />
+      <StepperTitle>Connect Account</StepperTitle>
+    </StepperItem>
+  </Stepper>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Stepper activeStep={0}>
+  <StepperItem>
+    <StepperStatusIcon status="inactive" />
+    <StepperTitle>Inactive Stepper Item</StepperTitle>
+  </StepperItem>
+</Stepper>`}
+  headline="Stepper Item (status inactive)">
+  <Stepper activeStep={0}>
+    <StepperItem>
+      <StepperStatusIcon status="inactive" />
+      <StepperTitle>Inactive Stepper Item</StepperTitle>
+    </StepperItem>
+  </Stepper>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Stepper activeStep={0}>
+  <StepperItem>
+    <StepperStatusIcon status="success" />
+    <StepperTitle>Success Stepper Item</StepperTitle>
+  </StepperItem>
+</Stepper>`}
+  headline="Stepper Item (status success)">
+  <Stepper activeStep={0}>
+    <StepperItem>
+      <StepperStatusIcon status="success" />
+      <StepperTitle>Success Stepper Item</StepperTitle>
+    </StepperItem>
+  </Stepper>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Stepper activeStep={0}>
+  <StepperItem>
+    <StepperStatusIcon status="failed" />
+    <StepperTitle>Failed Stepper Item</StepperTitle>
+  </StepperItem>
+</Stepper>`}
+  headline="Stepper Item (status failed)">
+  <Stepper activeStep={0}>
+    <StepperItem>
+      <StepperStatusIcon status="failed" />
+      <StepperTitle>Failed Stepper Item</StepperTitle>
+    </StepperItem>
+  </Stepper>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Stepper activeStep={0}>
+  <StepperItem>
+    <StepperStatusIcon status="warning" />
+    <StepperTitle>Warning Stepper Item</StepperTitle>
+  </StepperItem>
+</Stepper>`}
+  headline="Stepper Item (status warning)">
+  <Stepper activeStep={0}>
+    <StepperItem>
+      <StepperStatusIcon status="warning" />
+      <StepperTitle>Warning Stepper Item</StepperTitle>
+    </StepperItem>
+  </Stepper>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Stepper activeStep={0}>
+  <StepperItem>
+    <StepperStatusIcon status="loading" />
+    <StepperTitle>Loading Stepper Item</StepperTitle>
+  </StepperItem>
+</Stepper>`}
+  headline="Stepper Item (status loading)">
+  <Stepper activeStep={0}>
+    <StepperItem>
+      <StepperStatusIcon status="loading" />
+      <StepperTitle>Loading Stepper Item</StepperTitle>
+    </StepperItem>
+  </Stepper>
+</ComponentPreview>
+
+<div class="py-12" />
+
+<ComponentPreview
+  code={`<Stepper activeStep={1}>
+  <StepperItem>
+    <StepperStatusIcon status="success" />
+    <StepperTitle>Create Project</StepperTitle>
+  </StepperItem>
+  <StepperItem>
+    <StepperStatusIcon status="loading" />
+    <StepperTitle>Select Tooling</StepperTitle>
+  </StepperItem>
+  <StepperItem>
+    <StepperStatusIcon status="inactive" />
+    <StepperTitle>Connect Account</StepperTitle>
+  </StepperItem>
+</Stepper>`}
+  headline="Stepper {activeStep}"
+  description="activeStep attribute receives a number, identifying the current active tab/step (starts from 0)">
+  <Stepper activeStep={1}>
+    <StepperItem>
+      <StepperStatusIcon status="success" />
+      <StepperTitle>Create Project</StepperTitle>
+    </StepperItem>
+    <StepperItem>
+      <StepperStatusIcon status="loading" />
+      <StepperTitle>Select Tooling</StepperTitle>
+    </StepperItem>
+    <StepperItem>
+      <StepperStatusIcon status="inactive" />
+      <StepperTitle>Connect Account</StepperTitle>
+    </StepperItem>
+  </Stepper>
+</ComponentPreview>

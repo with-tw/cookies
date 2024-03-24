@@ -27,7 +27,7 @@ export const ComponentPreview = forwardRef<
       <div
         ref={ref}
         className={cn(
-          'component-preview mt-6 py-4 min-h-[400px] justify-center border border-neutral-700 bg-white/10 rounded-2xl flex flex-row items-center relative w-full backdrop-blur-sm',
+          'component-preview mt-6 py-4 min-h-[400px] justify-center border border-neutral-700 bg-neutral-900 rounded-2xl flex flex-row items-center relative w-full backdrop-blur-sm',
           className,
         )}
         {...args}>
