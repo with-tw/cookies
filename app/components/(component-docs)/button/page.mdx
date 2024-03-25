@@ -2,10 +2,13 @@ import ComponentDocsHeader from '@/components/website/component-docs-header';
 import { SETUP_CODE } from '@/package/registry/setup-code.tsx';
 import { CodeBlock } from '@/components/website/code-block.tsx';
 import { ComponentPreview } from '@/components/website/component-preview.tsx';
+import DocsPageOutline from '@/components/website/docs-page-outline.tsx';
 import { Button } from '@/components/ui/button.tsx';
 import { ComponentManualSetup } from '@/components/sections/component-manual-setup.tsx';
 
 <ComponentDocsHeader />
+
+<DocsPageOutline />
 
 <ComponentManualSetup>
   <CodeBlock hasViewMore fileName={SETUP_CODE['button'].registerAt}>
