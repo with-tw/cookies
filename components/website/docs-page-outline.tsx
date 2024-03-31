@@ -44,8 +44,8 @@ export default function DocsPageOutline() {
   }, []);
 
   return (
-    <div className="docs-page-outline-wrapper fixed bottom-8 right-16 w-[160px] flex flex-col gap-2 items-start h-auto">
-      <p className='text-sm font-medium text-white mb-2'>Page Outline</p>
+    <div className="docs-page-outline-wrapper fixed bottom-8 right-16 w-[160px] hidden xl:flex flex-col gap-2 items-start h-auto">
+      <p className='text-sm font-medium text-white mb-2'>Page Outline</p> 
       {outline.map(({ id, value, isInViewport }, index: number) => (
         <Link key={index} href={`#${id}`} className={`text-xs ${isInViewport ? 'text-blue-500' : 'text-white/60'}`}>
           {value}
