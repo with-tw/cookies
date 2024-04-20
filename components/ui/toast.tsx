@@ -9,14 +9,19 @@ import {
 } from '../configs/animation-config';
 import { Button } from './button';
 
+export type ToastPositionType = "top-right" | "top-left" | "bottom-right" | "bottom-left";
+
+export type ToastProviderType = React.ComponentProps<typeof RadixToast.Provider> & {
+  position?: ToastPositionType;
+}
+
 export const ToastProvider = forwardRef<
-  React.ElementRef<typeof RadixToast.Provider>,
-  React.ComponentPropsWithoutRef<typeof RadixToast.Provider>
->(({ children, ...args }, _) => {
+  HTMLElement, ToastProviderType
+>(({ children, position = "bottom-right", ...args }, _) => {
   return (
     <RadixToast.Provider {...args}>
       {children}
-      <ToastViewport />
+      <ToastViewport position={position} />
     </RadixToast.Provider>
   );
 });
@@ -79,15 +84,6 @@ export const ToastDescription = forwardRef<
 
 ToastDescription.displayName = 'ToastDescription';
 
-export const ToastClose = forwardRef<
-  React.ElementRef<typeof RadixToast.Close>,
-  React.ComponentPropsWithoutRef<typeof RadixToast.Close>
->(({ className, ...args }, ref) => {
-  return <RadixToast.Close ref={ref} className={cn('', className)} {...args} />;
-});
-
-ToastClose.displayName = 'ToastClose';
-
 export type ToastActionType = React.ComponentProps<typeof RadixToast.Action> &
   React.ComponentProps<typeof Button>;
 
@@ -95,7 +91,7 @@ export const ToastAction = forwardRef<
   HTMLButtonElement, ToastActionType
 >(({ className, children, ...args }, ref) => {
   return (
-    <RadixToast.Action ref={ref} className={cn('absolute top-4 right-4', className)} {...args} asChild>
+    <RadixToast.Action ref={ref} className={cn('absolute top-4 right-4', className)} asChild {...args}>
       <Button size='sm' variant='secondary'>{children}</Button>
     </RadixToast.Action>
   );
@@ -103,15 +99,27 @@ export const ToastAction = forwardRef<
 
 ToastAction.displayName = 'ToastAction';
 
+export const ToastViewportPositionStyle: Record<ToastPositionType, string> = {
+  "bottom-left": "bottom-0 left-0",
+  "bottom-right": "bottom-0 right-0",
+  "top-left": "top-0 left-0",
+  "top-right": "top-0 right-0"
+} satisfies Record<ToastPositionType, string>;
+
+export type ToastViewportType = React.ComponentProps<typeof RadixToast.Viewport> & {
+  position: ToastPositionType;
+}
+
 export const ToastViewport = forwardRef<
-  React.ElementRef<typeof RadixToast.Viewport>,
-  React.ComponentPropsWithoutRef<typeof RadixToast.Viewport>
->(({ className, ...args }, ref) => {
+  HTMLOListElement,
+  ToastViewportType
+>(({ className, position = "bottom-right", ...args }, ref) => {
   return (
     <RadixToast.Viewport
       ref={ref}
       className={cn(
-        '[--viewport-padding:_25px] fixed bottom-0 right-0 flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[420px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none',
+        '[--viewport-padding:_25px] fixed flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[420px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none',
+        ToastViewportPositionStyle[position],
         className,
       )}
       {...args}
