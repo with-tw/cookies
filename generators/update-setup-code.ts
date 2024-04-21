@@ -19,6 +19,7 @@ type CodeRegisteryType =
   | 'sidebar-menu'
   | 'pillar'
   | 'stepper'
+  | 'toast'
   | 'responsive-control';
 
 const OUTPUT_PATH = path.join(__dirname, '../package/registry/setup-code.tsx');
@@ -82,6 +83,10 @@ const FILES_TO_REGISTER: Record<
     registerAt: 'components/ui/stepper.tsx',
     path: path.join(__dirname, '../components/ui/stepper.tsx'),
   },
+  toast: {
+    registerAt: 'components/ui/toast.tsx',
+    path: path.join(__dirname, '../components/ui/toast.tsx'),
+  },
   'responsive-control': {
     registerAt: 'components/layouts/responsive-control.tsx',
     path: path.join(__dirname, '../components/layouts/responsive-control.tsx'),
@@ -117,6 +122,7 @@ export type CodeRegisteryType =
   | 'sidebar-menu'
   | 'pillar'
   | 'stepper'
+  | 'toast'
   | 'responsive-control';
   
 export const SETUP_CODE: Record<CodeRegisteryType, { registerAt: string; code: string }> = ${JSON.stringify(setupCode, null, 2)};

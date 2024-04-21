@@ -14,7 +14,7 @@ export interface ContactInputProps
 }
 
 export interface ContactInputTypeareaProps
-  extends React.InputHTMLAttributes<HTMLInputElement> { }
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 export const ContactInput = forwardRef<HTMLDivElement, ContactInputProps>(
   (

@@ -19,7 +19,9 @@ export const ComponentPreview = forwardRef<
   return (
     <section className="component-preview-container">
       <div className="component-details-wrapper">
-        <h2 className="component-preview-headline docs-page-headline leading-snug tracking-tighter font-semibold text-2xl" id={headline.toLowerCase().replace(/\s+/g, '-')}>
+        <h2
+          className="component-preview-headline docs-page-headline leading-snug tracking-tighter font-semibold text-2xl"
+          id={headline.toLowerCase().replace(/\s+/g, '-')}>
           {headline}
         </h2>
         {description && <p className="text-white/40 text-sm">{description}</p>}
