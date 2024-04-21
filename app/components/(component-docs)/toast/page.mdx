@@ -24,6 +24,8 @@ import DocsPageOutline from '@/components/website/docs-page-outline.tsx';
 <ComponentDocsHeader />
 
 <ComponentManualSetup>
+  <CodeBlock>{`# using npm\nnpm install @radix-ui/react-toast\n\n# using yarn\nyarn add @radix-ui/react-toast`}</CodeBlock>
+  <div class="py-6" />
   <CodeBlock hasViewMore fileName={SETUP_CODE['toast'].registerAt}>
     {SETUP_CODE['toast'].code}
   </CodeBlock>
