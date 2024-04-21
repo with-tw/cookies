@@ -12,6 +12,7 @@ import { SidebarMenuExample } from './examples/sidebar-menu-examples';
 import { PillarExample } from './examples/pillar-examples';
 import Image from 'next/image';
 import { StepperExample } from './examples/stepper-examples';
+import { ToastComponentDemo } from './examples/toast-examples';
 
 export type ComponentListItemType = {
   name: string;
@@ -137,6 +138,16 @@ export const ComponentsList: ComponentListItemType[] = [
     render: (
       <div className="scale-[60%]">
         <StepperExample />
+      </div>
+    ),
+  },
+  {
+    name: 'Toast',
+    description: 'A simple and customizable toast component using Radix',
+    path: '/components/toast',
+    render: (
+      <div className="scale-[60%]">
+        <ToastComponentDemo />
       </div>
     ),
   },
